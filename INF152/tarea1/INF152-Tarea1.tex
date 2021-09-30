@@ -1,0 +1,138 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{tikz}
+%\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,automata}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,}
+}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\begin{document}
+
+\thispagestyle{empty}
+ 	
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: Margarita Bugueño, Sebastián Gallardo.}\\
+{\large Ayudantes: Valentina Aróstica, Bryan González, Sofía Mañana y Sofía Riquelme}
+
+Universidad T\'ecnica Federico Santa Mar\'{\i}a
+
+Departamento de Inform\'atica -- CSJ - CC 
+
+Septiembre 24, 2021
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+Nombre:
+
+\begin{tabular}{|c|}\hline
+%%%%%%%%%%%%%%%%%%%%%%%% !!!! LEER !!!!  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Borre los caracteres ~ y los signo peso $, para poner su nombre aquí: %
+Diego Eduardo Paz Letelier\\\hline
+\end{tabular}
+
+\vspace{0.1cm}
+
+Rol:
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\hline
+%%%%%%%%%%%%%%%%%%%%%%%% !!!! LEER !!!!  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NO borre los caracteres ampersand &, entre ellos ponga cada dígito de su rol:%
+%EJEMPLO: 2 & 0 & 2 & 0 & 7 & 3 & 5 & 0 & 0 & 0
+2 & 0 & 2 & 0 & 0 & 4 & 5 & 0 & 2 & - & K\\\hline
+\end{tabular}
+\end{minipage}
+
+\vspace{0.3cm}
+
+\begin{center}
+    \huge Tarea 1
+\end{center}
+
+\section{Reglas generales}
+\begin{itemize}
+    \item Esta tarea tiene como objetivo, el que usted aprenda a usar \LaTeX, y que refresque los contenidos relacionados con el Certamen 1. 
+    \item Debe investigar por su cuenta la sintáxis de \LaTeX $~$para adquirir las herramientas que le permitan elaborar un desarrollo claro, ordenado, y \textbf{formal} en cada pregunta.
+    
+    \item Para resolver cada pregunta, debe hacer uso de los contenidos, algoritmos y métodos aprendidos en el curso (formalización, tablas de verdad, técnicas de inferencia, técnicas de demostración, operaciones e identidades de conjuntos, etc). Si su respuesta final es correcta, pero se ha utilizado un método distinto al enseñado en clases (por ejemplo inducción, prueba y error, o descarte) no se asignará puntaje. Ídem si entrega resultados sin desarrollo.
+    
+    \item La tarea debe realizarse de manera individual. Cabe decir, que el buscar por su cuenta la solución a los problemas aquí planteados (que son sencillos), y aprender a usar \LaTeX  $~$mientras desarrolla, le será de mucha utilidad tanto en este curso, como en otros futuros.
+    
+    \item Debe entregar el archivo generado en PDF \textbf{y} el archivo .tex que contiene su código de \LaTeX, ambos en una carpeta comprimida en .zip, la cual debe llevar su nombre y apellido. Ejemplo:\\ Nombre\_Apellido.zip
+    
+    \item No se descontará por warnings en el .tex dado que es la primera tarea, pero su archivo .tex \textbf{DEBE} compilar (se descontará 60 puntos si no lo hace, aunque exista un PDF con su desarrollo). Errores y warnings no son lo mismo. Si su código tiene errores probablemente su .tex no compile, aunque es posible que algunos editores de \LaTeX $~$generen un PDF de todas formas. Procure corregir todos los errores antes de entregar, y dentro de lo posible evitar warnings.
+    
+    \item Revise 2 veces que el archivo .tex se corresponda con el PDF que está entregando. Se revisará que todo esté completo y que el PDF sea exactamente el generado por su código de \LaTeX . Si se equivoca y entrega un archivo erróneo, vacío, ajeno, versión antigua, etc; se revisará lo entregado sin opción de hacer una segunda entrega.
+    
+        
+    \item Tiene hasta las 00:00 hrs del día 04 de octubre para entregar esta tarea vía Aula.
+    
+    \item Se descontarán 10 puntos por atraso desde las 00:01 hrs hasta las 01:00 hrs, y se irán restando sucesivamente 10 puntos de su nota por cada hora de atraso.
+    
+    \item Recuerde revisar la ayudantía de \LaTeX $~$en el canal de YouTube:
+    \href{https://youtu.be/tewLnd3db24}{https://youtu.be/tewLnd3db24}
+    
+\end{itemize}
+
+
+\section{Enunciados}
+\begin{enumerate}
+    \item Formule el siguiente argumento en lógica proposicional y derive lo solicitado explicando su razonamiento.
+    Los profesores Margarita y Sebastián han detectado (lamentablemente) un caso de copia múltiple en el último certamen de Estructuras Discretas. Las cuatro personas implicadas (Bryan, Sofía, Valentina y Claudio) dieron sus respectivas declaraciones: 
+    \begin{itemize}
+        \item Si Valentina dice la verdad, también lo hace Bryan,
+        \item Bryan y Sofía no pueden ambos decir la verdad,
+        \item Ni Sofía ni Claudio están mintiendo,
+        \item y si Claudio dice la verdad entonces Bryan miente.
+    \end{itemize}
+    Considerando las declaraciones de los acusados. ¿Pueden los profesores determinar quién miente, o quién dice la verdad? Desarrolle, e infiera los valores de verdad correspondientes, indicando el paso a paso. Concluya.
+    
+    \item Luego de una discusión en una ayudantía de INF152, los 4 ayudantes se dan cuenta que ningún alumno sabe cuando son sus cumpleaños. Como los ayudantes están molestos por esta situación, les piden que resuelvan el siguiente ejercicio para determinar las fechas:
+    \begin{enumerate}
+       \item Hay cuatro ayudantes, el primer ejercicio es para ver en qué mes son los cumpleaños. Cada conjunto representa un mes, tal que A = enero, B = febrero, C = marzo, D = abril, E= julio, F = agosto, G = septiembre. Reduzca lo más posible la siguiente expresión para obtener los meses de los cumpleaños.
+        
+        \begin{equation}
+            \overline{((\overline{D}-D)\cup(D-D))}\cup [(D-\overline{(A \cup G))} \cup \overline{D\cup(\overline{A}\cap \overline{G})}] \cup [((\overline{E}\cup \overline{F})\cap (\overline{E}\cup B)) \cap (E - (\overline{F}\cup B))]
+        \end{equation}\\[0.3cm]
+        \item Ahora, que saben los meses, falta determinar los días. Para lo anterior, deben demostrarlo de esta conversación entre algunos alumnos.
+        \begin{itemize}
+            \item Si Bryan está el 23, no todas las fechas son pares.
+            \item Sofi M. y Vale están en el mismo mes y Bryan está el 23.
+            \item Si Bryan está en el mes $A$, Sofi M. está el 22
+            \item Si Bryan está el 23 y Sofi M. está el 22, entonces Sofi R. está el 29 y Vale está el 14.
+            \item Si Sofi R. está el 29, entonces está en el mes $G$.
+            \item Bryan está en el mes $A$ y el 23.
+            
+        \end{itemize}
+        (Sofi R. y Sofi M. son ayudantes distintas).\\
+        ¿Cuándo son los cumpleaños de el y las ayudantes?
+    
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

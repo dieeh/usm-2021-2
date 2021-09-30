@@ -1,0 +1,13 @@
+<condicional> ::= '?' dir comando
+
+<dir> ::= ('U' | 'D' | '<' | '>') numero {('U' | 'D' | '<' | '>') numero}
+
+<comando> ::= condicional | operacion
+
+<operacion> ::= 'A' | 'B' | 'X' dir | 'Y' dir | 'L' tipo | 'R' | 'Z' | 'S' tipo
+
+<numero> ::= 0 | no_zero {'0' | no_zero} 
+
+<no_zero> ::= '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+
+<tipo> ::= 'c' | 'e'
