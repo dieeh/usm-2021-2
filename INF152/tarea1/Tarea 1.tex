@@ -71,5 +71,81 @@ Rol:
     \huge Tarea 1
 \end{center}
 
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\section{Enunciado 1}
+
+\subsection{Formalizaci\'on}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{itemize}
+    \item \textit{P}(\textit{x}): \textit{x} dice la verdad.
+    \item a: Bryan.
+    \item b: Valentina.
+    \item c: Sof\'ia.
+    \item d: Claudio.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+Formalizando los enunciados obtenemos que:
+\begin{equation}
+    P(b) \Rightarrow P(a)
+\end{equation}
+\begin{equation}
+    P(a) \Leftrightarrow \neg P(c)
+\end{equation}
+\begin{equation}
+    P(c) \wedge  P(d)
+\end{equation}
+\begin{equation}
+    P(d) \Rightarrow \neg P(a)
+\end{equation}
+\end{minipage}
+
+\subsection{Demostraci\'on}
+\begin{minipage}[c]{0.4\textwidth}
+\begin{equation*}
+    P(c) \wedge  P(d)
+\end{equation*}
+\begin{equation*}
+    P(d)
+\end{equation*}
+\begin{equation*}
+    \neg P(a)
+\end{equation*}
+\begin{equation*}
+    \neg P(b)
+\end{equation*}
+\begin{equation*}
+    \neg P(a) \wedge \neg P(b)
+\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.5\textwidth}
+\begin{enumerate}[I{.-}]
+    \item Hip\'otesis
+    \item Simplificaci\'on de (3) en base a I.-
+    \item Modus Ponens de (4) y II.-
+    \item Modus Tollens de (1) y III.-
+    \item Ley de combinaci\'on de III.- y IV.-
+\end{enumerate}
+\end{minipage}
+\vspace{0.3cm}
+\newline
+Podemos concluir entonces que ni Bryan ni Valentina dicen la verdad.
+
+
+\section{Enunciado 2}
+
+\subsection{a)}
+
+\subsubsection{Formalizaci\'on}
+
+\subsubsection{Demostraci\'on}
+
+\subsection{b)}
+
+\subsubsection{Formalizaci\'on}
+
+\subsubsection{Demostraci\'on}
 
 \end{document}
