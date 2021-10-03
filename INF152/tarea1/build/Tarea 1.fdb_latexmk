@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1633155980 "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" "build/Tarea 1.pdf" "Tarea 1" 1633155985
+["pdflatex"] 1633250234 "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" "build/Tarea 1.pdf" "Tarea 1" 1633250238
   "C:/Users/diego/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1632880471 9705527 8c0f69fbec2492fa1180a525ed6112eb ""
   "C:/Users/diego/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1632880121 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -22,6 +22,7 @@
   "D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247600266 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247600267 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247600267 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247600273 34694 870c211f62cb72718a00e353f14f254d ""
   "D:/Program Files/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "D:/Program Files/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "D:/Program Files/MiKTeX/tex/generic/babel/babel.def" 1626975776 123985 95be6f36f6c54070fdcb3cb50663eed2 ""
@@ -101,6 +102,7 @@
   "D:/Program Files/MiKTeX/tex/generic/uniquecounter/uniquecounter.sty" 1576434012 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
   "D:/Program Files/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg" 1616067285 584 2a1075dd71571459f59146da9f7502ad ""
   "D:/Program Files/MiKTeX/tex/latex/amsfonts/amsfonts.sty" 1358197772 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
+  "D:/Program Files/MiKTeX/tex/latex/amsfonts/amssymb.sty" 1358197772 13829 94730e64147574077f8ecfea9bb69af4 ""
   "D:/Program Files/MiKTeX/tex/latex/amsfonts/umsa.fd" 1358197772 961 6518c6525a34feb5e8250ffa91731cff ""
   "D:/Program Files/MiKTeX/tex/latex/amsfonts/umsb.fd" 1358197772 961 d02606146ba5601b5645f987c92e6193 ""
   "D:/Program Files/MiKTeX/tex/latex/amsmath/amsbsy.sty" 1623002795 2222 da905dc1db75412efd2d8f67739f0596 ""
@@ -156,12 +158,12 @@
   "D:/Program Files/MiKTeX/tex/latex/tools/multicol.sty" 1622553926 31530 f9ba11d1c179e918d577463ebdb887ca ""
   "D:/Program Files/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1623009260 55589 34128738f682d033422ca125f82e5d62 ""
-  "Tarea 1.tex" 1633155972 3167 db8555023f8d92b2a7bf2da9e5716329 ""
-  "build/Tarea 1.aux" 1633155984 1989 a7eede188cedfa109b61f84dec22f094 "pdflatex"
-  "build/Tarea 1.out" 1633155984 1118 b5946c128e1b6dca3b022dad31109675 "pdflatex"
-  "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" 1633155972 3167 db8555023f8d92b2a7bf2da9e5716329 ""
+  "Tarea 1.tex" 1633250233 6229 5df655db514f520c3b54470c31bf86ba ""
+  "build/Tarea 1.aux" 1633250238 1245 d21eeca9e517a29abcc3c955764565e0 "pdflatex"
+  "build/Tarea 1.out" 1633250238 447 409e93c1beee86c8a510f8ceac83b955 "pdflatex"
+  "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" 1633250233 6229 5df655db514f520c3b54470c31bf86ba ""
   (generated)
-  "build/Tarea 1.pdf"
-  "build/Tarea 1.log"
-  "build/Tarea 1.aux"
   "build/Tarea 1.out"
+  "build/Tarea 1.aux"
+  "build/Tarea 1.log"
+  "build/Tarea 1.pdf"

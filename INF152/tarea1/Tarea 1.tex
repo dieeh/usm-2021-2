@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,mexico]{babel}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{enumerate}
 \usepackage{float}
@@ -73,6 +74,8 @@ Rol:
 
 \counterwithin*{equation}{section}
 \counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+
 
 \section{Enunciado 1}
 
@@ -80,10 +83,10 @@ Rol:
 \begin{minipage}[t]{0.4\textwidth}
 \begin{itemize}
     \item \textit{P}(\textit{x}): \textit{x} dice la verdad.
-    \item a: Bryan.
-    \item b: Valentina.
-    \item c: Sof\'ia.
-    \item d: Claudio.
+    \item \textit{a}: Bryan.
+    \item \textit{b}: Valentina.
+    \item \textit{c}: Sof\'ia.
+    \item \textit{d}: Claudio.
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
@@ -136,16 +139,92 @@ Podemos concluir entonces que ni Bryan ni Valentina dicen la verdad.
 
 \section{Enunciado 2}
 
-\subsection{a)}
+\subsection*{a)}
+Original:
+\begin{equation*}
+    \overline{((\overline{D}-D)\cup(D-D))}\cup [(D-\overline{(A \cup G))} \cup \overline{D\cup(\overline{A}\cap \overline{G})}] \cup [((\overline{E}\cup \overline{F})\cap (\overline{E}\cup B)) \cap (E - (\overline{F}\cup B))]
+\end{equation*}
 
-\subsubsection{Formalizaci\'on}
+\subsubsection*{Reducci\'on}
+\begin{equation*}
+    (\overline{(\overline{D}-D)} \cap \overline{(D-D)}) \cup [(D-\overline{(A \cup G)})\cup \overline{D \cup \overline{(A \cup G)}}] \cup [(\overline{(E \cap F)} \cup (\overline{E} \cup B)) \cap (E-(\overline{F} \cup B))]
+\end{equation*}
+\begin{equation*}
+    (\overline{(\overline{D} \cap \overline{D})} \cap \overline{(D \cap \overline{D})}) \cup [(D \cap \overline{\overline{(A \cup G)}}) \cup \overline{D \cup \overline{(A \cup G)}}] \cup [(\overline{(E \cap F)} \cup (\overline{E} \cup B)) \cap (E \cap \overline{(\overline{F} \cup B)})]
+\end{equation*}
+\begin{equation*}
+    (\overline{\overline{D}} \cap \overline{\varnothing}) \cup [(D \cap (A \cup G)) \cup \overline{D} \cap \overline{\overline{(A \cup G)}}] \cup [(\overline{(E \cap F)} \cup (\overline{E} \cup B)) \cap (E \cap (\overline{\overline{F}} \cap B))]
+\end{equation*}
 
-\subsubsection{Demostraci\'on}
 
-\subsection{b)}
 
-\subsubsection{Formalizaci\'on}
+\subsection*{b)}
 
-\subsubsection{Demostraci\'on}
+\subsubsection*{Formalizaci\'on}
+\begin{minipage}[t]{0.6\textwidth}
+    \textit{x} \(\in\) Ayudantes ; \textit{y} \(\in\) d\'ias del mes ; \textit{z} \(\in\) meses del año)
+\begin{itemize}
+    \item \textit{G}(\textit{x},\textit{y}): \textit{x} est\'a de cumpleaños el d\'ia \textit{y}.
+    \item \textit{K}(\textit{x},\textit{z}): El cumpleaños de \textit{x} es en el mes de \textit{z}.
+    \item \textit{J}(\textit{y}): \textit{y} es par.
+    \item \textit{a}: Bryan
+    \item \textit{b}: Vale
+    \item \textit{c}: Sofi M.
+    \item \textit{d}: Sofi R.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\hspace{3mm}Formalizando los enunciados obtenemos que:
+\begin{equation}
+    G(a,23) \Rightarrow \exists y \hspace{2mm} \neg J(y)
+\end{equation}
+\begin{equation}
+    \exists z \hspace{5mm} (K(c,z) \wedge K(b,z)) \wedge G(a,23)
+\end{equation}
+\begin{equation}
+    K(a,A) \Rightarrow G(c,22)
+\end{equation}
+\begin{equation}
+    (G(a,23) \wedge G(c, 22)) \Rightarrow (G(d,29) \wedge G(b,14))
+\end{equation}
+\begin{equation}
+    G(d,29) \Rightarrow K(d,G)
+\end{equation}
+\begin{equation}
+    K(a,A) \wedge G(a,23)
+\end{equation}
+\end{minipage}
+
+\subsubsection*{Demostraci\'on}
+\begin{minipage}[c]{0.4\textwidth}
+\begin{equation*}
+    K(a,A) \wedge G(a,23)
+\end{equation*}
+\begin{equation*}
+    G(a,23)
+\end{equation*}
+\begin{equation*}
+    K(a,A)
+\end{equation*}
+\begin{equation*}
+    G(c,22)
+\end{equation*}
+\begin{equation*}
+    G(a,23) \wedge G(c,22)
+\end{equation*}
+\begin{equation*}
+    G(d,29) \wedge G(b,14)
+\end{equation*}
+\end{minipage}
+\begin{minipage}[c]{0.5\textwidth}
+\begin{enumerate}[I{.-}]
+    \item Hip\'otesis
+    \item Simplificaci\'on
+    \item Simplificaci\'on
+    \item Modus Ponens de III.- y (3)
+    \item Ley de combinaci\'on de II.- y IV.-
+    \item Modus Ponens de V.- y (4)
+\end{enumerate}
+\end{minipage}
 
 \end{document}
