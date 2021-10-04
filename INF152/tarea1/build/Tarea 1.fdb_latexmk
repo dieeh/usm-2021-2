@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1633312090 "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" "build/Tarea 1.pdf" "Tarea 1" 1633312097
+["pdflatex"] 1633312997 "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" "build/Tarea 1.pdf" "Tarea 1" 1633313004
   "C:/Users/diego/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1633297980 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/diego/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1633297983 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "C:/Users/diego/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs7.tfm" 1633297981 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -164,12 +164,12 @@
   "D:/Program Files/MiKTeX/tex/latex/tools/multicol.sty" 1622553926 31530 f9ba11d1c179e918d577463ebdb887ca ""
   "D:/Program Files/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1623009260 55589 34128738f682d033422ca125f82e5d62 ""
-  "Tarea 1.tex" 1633312087 9837 95ee4ab5c28957a0f401b6354403c44f ""
-  "build/Tarea 1.aux" 1633312096 1245 d6f7b3106ecbe38925c184ed477dab60 "pdflatex"
-  "build/Tarea 1.out" 1633312096 447 409e93c1beee86c8a510f8ceac83b955 "pdflatex"
-  "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" 1633312087 9837 95ee4ab5c28957a0f401b6354403c44f ""
+  "Tarea 1.tex" 1633312992 9833 4228cc28a4b2ee52c88a372cae108a56 ""
+  "build/Tarea 1.aux" 1633313003 1245 d6f7b3106ecbe38925c184ed477dab60 "pdflatex"
+  "build/Tarea 1.out" 1633313003 447 409e93c1beee86c8a510f8ceac83b955 "pdflatex"
+  "d:/diego/Universidad/2021-2/INF152/tarea1/Tarea 1.tex" 1633312992 9833 4228cc28a4b2ee52c88a372cae108a56 ""
   (generated)
-  "build/Tarea 1.log"
   "build/Tarea 1.out"
-  "build/Tarea 1.pdf"
+  "build/Tarea 1.log"
   "build/Tarea 1.aux"
+  "build/Tarea 1.pdf"
