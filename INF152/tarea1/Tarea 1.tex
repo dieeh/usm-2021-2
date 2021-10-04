@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
+\usepackage{mathrsfs}
 \usepackage{enumerate}
 \usepackage{float}
 \usepackage{indentfirst}
@@ -132,7 +133,7 @@ Formalizando los enunciados obtenemos que:
     \item Ley de combinaci\'on de III.- y IV.-
 \end{enumerate}
 \end{minipage}
-\vspace{0.3cm}
+\vspace{0.4cm}
 \newline
 Podemos concluir entonces que ni Bryan ni Valentina dicen la verdad.
 
@@ -155,8 +156,63 @@ Original:
 \begin{equation*}
     (\overline{\overline{D}} \cap \overline{\varnothing}) \cup [(D \cap (A \cup G)) \cup \overline{D} \cap \overline{\overline{(A \cup G)}}] \cup [(\overline{(E \cap F)} \cup (\overline{E} \cup B)) \cap (E \cap (\overline{\overline{F}} \cap B))]
 \end{equation*}
-
-
+\begin{equation*}
+    (D \cap \mathscr{U}) \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [((\overline{E} \cup \overline{F}) \cup (\overline{E} \cup B)) \cap (E \cap (F \cap B))]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [((\overline{E} \cup \overline{F}) \cup (\overline{E} \cup B)) \cap (E \cap (F \cap B))]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [((\overline{E} \cup \overline{F}) \cup (\overline{E} \cup B)) \cap E \cap (F \cap B)]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [((\overline{E} \cup \overline{F}) \cup (\overline{E} \cup B)) \cap E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [(\overline{E} \cup \overline{F} \cup (\overline{E} \cup B)) \cap E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [E \cap (\overline{E} \cup \overline{F} \cup (\overline{E} \cup B)) \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [E \cap (\overline{F} \cup (\overline{E} \cup B)) \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [E \cap F \cap (\overline{F} \cup (\overline{E} \cup B)) \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [E \cap F \cap (\overline{E} \cup B) \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [E \cap F \cap B \cap (B \cup \overline{E})]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap (A \cup G)) \cup \overline{D} \cap (A \cup G)] \cup [E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [D \cap (A \cup G) \cup \overline{D} \cap (A \cup G)] \cup [E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [D \cap \overline{D} \cup (A \cup G)  \cap (A \cup G)] \cup [E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(D \cap \overline{D}) \cup (A \cup G)  \cap (A \cup G)] \cup [E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(\varnothing) \cup (A \cup G)  \cap (A \cup G)] \cup [E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [(A \cup G)  \cap (A \cup G)] \cup [E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup [A \cup G] \cup [E \cap F \cap B]
+\end{equation*}
+\begin{equation*}
+    D \cup A \cup G \cup [E \cap F \cap B]
+\end{equation*}
+\vspace{0.5cm}
+\newline
+Entonces, los meses de los cumpleaños serian D, A y G, es decir, Abril, Enero y Septiembre
 
 \subsection*{b)}
 
@@ -215,6 +271,18 @@ Original:
 \begin{equation*}
     G(d,29) \wedge G(b,14)
 \end{equation*}
+\begin{equation*}
+    G(d,29)
+\end{equation*}
+\begin{equation*}
+    K(d,G)
+\end{equation*}
+\begin{equation*}
+    \exists z \hspace{5mm} (K(c,z) \wedge K(b,z)) \wedge G(a,23)
+\end{equation*}
+\begin{equation*}
+    \exists z \hspace{5mm} (K(c,z) \wedge K(b,z))
+\end{equation*}
 \end{minipage}
 \begin{minipage}[c]{0.5\textwidth}
 \begin{enumerate}[I{.-}]
@@ -224,7 +292,15 @@ Original:
     \item Modus Ponens de III.- y (3)
     \item Ley de combinaci\'on de II.- y IV.-
     \item Modus Ponens de V.- y (4)
+    \item Simplificaci\'on
+    \item Modus Ponens de VII.- y (5)
+    \item Hip\'otesis
+    \item Simplificaci\'on
 \end{enumerate}
 \end{minipage}
+\vspace{0.5cm}
+\newline
+Podemos concluir entonces que Bryan est\'a de cumpleaños el 23 de Enero, Sofi R. est\'a el 29 de Septiembre y Sofi M. y Vale est\'an el 22 y 14 del mismo mes. Entonces utilizando la informacion de a), sabemos que ese mes es Abril, por lo que Sofi M. y Vale est\'an el 22 y 14 de Abril respectivamente
 
 \end{document}
+ 

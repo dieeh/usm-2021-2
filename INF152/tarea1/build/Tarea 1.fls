@@ -131,6 +131,17 @@ INPUT D:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\tools\enumerate.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\tools\enumerate.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\tools\enumerate.sty
@@ -875,6 +886,13 @@ INPUT D:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\ursfs.fd
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\ursfs.fd
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\ursfs.fd
+INPUT D:\Program Files\MiKTeX\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\diego\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\diego\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
+INPUT C:\Users\diego\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
@@ -903,3 +921,5 @@ INPUT D:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT D:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT D:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT D:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT D:\Program Files\MiKTeX\fonts\type1\public\rsfs\rsfs10.pfb
+INPUT D:\Program Files\MiKTeX\fonts\type1\public\rsfs\rsfs10.pfb
