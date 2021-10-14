@@ -4,6 +4,7 @@
 #include <math.h>
 #include "Animal.h"
 
+
 void CrearAnimal(Animal* a){}
 
 void Borrar(Animal* a){
@@ -80,7 +81,7 @@ int Comparar(Animal* a1, Animal* a2){
     }
     if (a2->tipo_fuerza = 'f'){
         float temp = *(float*)a2->fuerza;
-        fuerza2 = (int) round(temp);
+        fuerza2 = (int) roundf(temp);
     }
 
     int velocidad1, velocidad2;
@@ -104,7 +105,7 @@ int Comparar(Animal* a1, Animal* a2){
     }
     if (a2->tipo_velocidad = 'f'){
         float temp = *(float*)a2->velocidad;
-        velocidad2 = (int) round(temp);
+        velocidad2 = (int) roundf(temp);
     }
 
     int resistencia1, resistencia2;
@@ -128,7 +129,7 @@ int Comparar(Animal* a1, Animal* a2){
     }
     if (a2->tipo_resistencia = 'f'){
         float temp = *(float*)a2->resistencia;
-        resistencia2 = (int) round(temp);
+        resistencia2 = (int) roundf(temp);
     }
     
 
