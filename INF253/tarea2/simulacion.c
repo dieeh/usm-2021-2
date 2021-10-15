@@ -36,8 +36,8 @@ int main(){
             MostrarMundo(mundo);
         }
         if (input == 4){
-            BorrarMundo(mundo);
             programa = false;
+            BorrarMundo(mundo);
         }
     }
     

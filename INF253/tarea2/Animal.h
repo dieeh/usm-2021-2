@@ -5,8 +5,8 @@ typedef struct Animal{
     char tipo_velocidad;
     void* resistencia;
     char tipo_resistencia;
-    void (*reproduccion)(Animal*, Animal*, Animal*);
-    void (*comerHuir)(Animal*, Animal*);
+    void (*reproduccion)(struct Animal*, struct Animal*, struct Animal*);
+    void (*comerHuir)(struct Animal*, struct Animal*);
 } Animal;
 
 
