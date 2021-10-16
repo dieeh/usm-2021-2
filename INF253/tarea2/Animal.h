@@ -11,6 +11,7 @@ typedef struct Animal{
     int coord2;
 } Animal;
 
+extern int n;  //tamaño de la matriz
 
 void CrearAnimal(Animal* a);
 void Borrar(Animal* a);

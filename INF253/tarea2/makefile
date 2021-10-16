@@ -10,3 +10,6 @@ simulacion.o: simulacion.c
 
 clean: 
 	rm out.o simulacion.o animal.o
+
+clear:
+	rm out.o simulacion.o animal.o

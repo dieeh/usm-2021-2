@@ -7,73 +7,87 @@
 
 void CrearAnimal(Animal* a){
     char tipoF;
-    scanf("Tipo de fuerza: %c", &tipoF);
+    printf("Tipo de fuerza: ");
+    scanf(" %c", &tipoF);
     a->tipo_fuerza = tipoF;
     if (tipoF == 'e'){
         int valorF;
-        scanf("Valor de fuerza: %d", &valorF);
+        printf("Valor de fuerza: ");
+        scanf(" %d", &valorF);
         a->fuerza = (int*)malloc(sizeof(int));
         a->fuerza = valorF;
     }
     if (tipoF == 'c'){
         char valorF;
-        scanf("Valor de fuerza: %c", &valorF);
+        printf("Valor de fuerza: ");
+        scanf(" %c", &valorF);
         a->fuerza = (char*)malloc(sizeof(char));
         a->fuerza = valorF;
     }
     if (tipoF == 'f'){
         float valorF;
-        scanf("Valor de fuerza: %f", &valorF);
+        printf("Valor de fuerza: ");
+        scanf(" %f", &valorF);
         a->fuerza = (float*)malloc(sizeof(float));
         a->fuerza = &valorF;
     }
     
     char tipoV;
-    scanf("Tipo de velocidad: %c", &tipoV);
+    printf("Tipo de velocidad: ");
+    scanf(" %c", &tipoV);
     a->tipo_velocidad = tipoV;
     if (tipoV == 'e'){
         int valorV;
-        scanf("Valor de velocidad: %d", &valorV);
+        printf("Valor de velocidad: ");
+        scanf(" %d", &valorV);
         a->velocidad = (int*)malloc(sizeof(int));
         a->velocidad = valorV;
     }
     if (tipoV == 'c'){
         char valorV;
-        scanf("Valor de velocidad: %c", &valorV);
+        printf("Valor de velocidad: ");
+        scanf(" %c", &valorV);
         a->velocidad = (char*)malloc(sizeof(char));
         a->velocidad = valorV;
     }
     if (tipoV == 'f'){
         float valorV;
-        scanf("Valor de velocidad: %f", &valorV);
+        printf("Valor de velocidad: ");
+        scanf(" %f", &valorV);
         a->velocidad = (float*)malloc(sizeof(float));
         a->velocidad = &valorV;
     }
 
     char tipoR;
-    scanf("Tipo de resistencia: %c", &tipoR);
+    printf("Tipo de resistencia: ");
+    scanf(" %c", &tipoR);
     a->tipo_resistencia = tipoR;
     if (tipoR == 'e'){
         int valorR;
-        scanf("Valor de resistencia: %d", &valorR);
+        printf("Valor de resistencia: ");
+        scanf(" %d", &valorR);
         a->resistencia = (int*)malloc(sizeof(int));
         a->resistencia = valorR;
     }
-    if (tipoV == 'c'){
+    if (tipoR == 'c'){
         char valorR;
-        scanf("Valor de resistencia: %c", &valorR);
+        printf("Valor de resistencia: ");
+        scanf(" %c", &valorR);
         a->resistencia = (char*)malloc(sizeof(char));
         a->resistencia = valorR;
     }
-    if (tipoV == 'f'){
+    if (tipoR == 'f'){
         float valorR;
-        scanf("Valor de resistencia: %f", &valorR);
+        printf("Valor de resistencia: ");
+        scanf(" %f", &valorR);
         a->resistencia = (float*)malloc(sizeof(float));
         a->resistencia = &valorR;
     }
     int func1, func2;
-    scanf("Funcion reproducción: %d", &func1);
-    scanf("Funcion comerHuir: %d", &func2);
+    printf("Funcion reproducción: ");
+    scanf(" %d", &func1);
+    printf("Funcion comerHuir: ");
+    scanf(" %d", &func2);
 
     if (func1 == 1){
         a->reproduccion = ReproduccionSimple;
@@ -100,46 +114,44 @@ void Borrar(Animal* a){
 }
 
 void MostrarAnimal(Animal* a){
-    int fuerza, velocidad, resistencia;
     if (a->tipo_fuerza = 'e'){
-        fuerza = *(int*)a->fuerza;
+        int fuerza = *(int*)a->fuerza;
+        printf("fuerza: %d", fuerza);
     }
     if (a->tipo_fuerza = 'c'){
-        char temp = *(char*)a->fuerza;
-        fuerza = (int)temp;
+        char fuerza = *(char*)a->fuerza;
+        printf("fuerza: %c", fuerza);
     }
     if (a->tipo_fuerza = 'f'){
-        float temp = *(float*)a->fuerza;
-        fuerza = (int) round(temp);
+        float fuerza = *(float*)a->fuerza;
+        printf("fuerza: %f", fuerza);
     }
 
     if (a->tipo_velocidad = 'e'){
-        velocidad = *(int*)a->velocidad;
+        int velocidad = *(int*)a->velocidad;
+        printf("velocidad: %d", velocidad);
     }
     if (a->tipo_velocidad = 'c'){
-        char temp = *(char*)a->velocidad;
-        velocidad = (int)temp;
+        char velocidad = *(char*)a->velocidad;
+        printf("velocidad: %c", velocidad);
     }
     if (a->tipo_velocidad = 'f'){
-        float temp = *(float*)a->velocidad;
-        velocidad = (int) round(temp);
+        float velocidad = *(float*)a->velocidad;
+        printf("velocidad: %f", velocidad);
     }
 
     if (a->tipo_resistencia = 'e'){
-        resistencia = *(int*)a->resistencia;
+        int resistencia = *(int*)a->resistencia;
+        printf("resistencia: %d", resistencia);
     }
     if (a->tipo_resistencia = 'c'){
-        char temp = *(char*)a->resistencia;
-        resistencia = (int)temp;
+        char resistencia = *(char*)a->resistencia;
+        printf("resistencia: %c", resistencia);
     }
     if (a->tipo_resistencia = 'f'){
-        float temp = *(float*)a->resistencia;
-        resistencia = (int) round(temp);
+        float resistencia = *(float*)a->resistencia;
+        printf("resistencia: %f", resistencia);
     }
-
-    printf("fuerza: %d", fuerza);
-    printf("velocidad: %d", velocidad);
-    printf("resistencia: %d", resistencia);
 }
 
 void Reproducir(Animal* a1, Animal* a2, Animal* hijo){
@@ -280,11 +292,11 @@ int Comparar(Animal* a1, Animal* a2){
 
 void BorrarMundo(Animal** Mundo){
     int i, j;
-    for (i = 0; i < 1000; i++){
-        for (j = 0; j < 1000; j++){
-            free(Mundo[i][j].fuerza);
-            free(Mundo[i][j].velocidad);
-            free(Mundo[i][j].resistencia);
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
+            if (Mundo[i][j].fuerza != NULL){
+                Borrar(&(Mundo[i][j]));
+            }
         }
         free(Mundo[i]);
     }
@@ -292,15 +304,16 @@ void BorrarMundo(Animal** Mundo){
 }
 
 void MostrarMundo(Animal** Mundo){
-    printf("0 significa vacío, X significa animal");
     int i, j;
-    for (i = 0; i < 1000; i++){
-        for (j = 0; j < 1000; j++){
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
             if (Mundo[i][j].fuerza == NULL){
-                printf("0 ");
+                printf("Existe un animal en las coordenadas (%d, %d) con estadisticas: ", i, j);
+                MostrarAnimal(&(Mundo[i][j]));
             }
             else{
-                printf("X ");
+                printf("Existe un animal en las coordenadas (%d, %d) con estadisticas: ", i, j);
+                MostrarAnimal(&(Mundo[i][j]));
             }
         }
         printf("\n");
