@@ -11,32 +11,38 @@ int main(){
     bool programa = true;
     int i, n = 1000;
     Animal** mundo;
-    mundo = (Animal**)malloc(n*sizeof(Animal*));
+    mundo = (Animal**)malloc(sizeof(Animal*) * n);
     for(i = 0; i < n; i++){
-        mundo[i] = (Animal*)malloc(n*sizeof(Animal));
+        mundo[i] = (Animal*)malloc(sizeof(Animal) * n);
     }
     srand(12345);  //seed del rand()
 
     //menu
     while (programa == true){
-        int input;
+        char input;
         printf("------Menú------\n");
         printf("1.- Crear animal\n");
         printf("2.- Avanzar una iteración en el tiempo\n");
         printf("3.- Mostrar el mundo\n");
         printf("4.- Terminar el programa\n");
         printf("----------------\n");
-        input = scanf("Ingrese una opcion del menu: %d");
-        if (input == 1){
-            
+        scanf("Ingrese una opcion del menu: %c", &input);
+        if (input == '1'){
+            int x, y;
+            scanf("Ingrese coordenada x: %d", &x);
+            printf("\n");
+            scanf("Ingrese coordenada y: %d", &y);
+            mundo[x][y].coord1 = x;
+            mundo[x][y].coord2 = y;
+            CrearAnimal(&(mundo[x][y]));
         }
-        if (input == 2){
+        if (input == '2'){
             iteracion_temp(mundo);
         }
-        if (input == 3){
+        if (input == '3'){
             MostrarMundo(mundo);
         }
-        if (input == 4){
+        if (input == '4'){
             programa = false;
             BorrarMundo(mundo);
         }

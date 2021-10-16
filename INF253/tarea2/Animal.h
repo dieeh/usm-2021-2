@@ -7,6 +7,8 @@ typedef struct Animal{
     char tipo_resistencia;
     void (*reproduccion)(struct Animal*, struct Animal*, struct Animal*);
     void (*comerHuir)(struct Animal*, struct Animal*);
+    int coord1;
+    int coord2;
 } Animal;
 
 

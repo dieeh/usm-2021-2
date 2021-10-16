@@ -6,61 +6,74 @@
 
 
 void CrearAnimal(Animal* a){
-    char tipoF = scanf("Tipo de fuerza: %c");
-    (a->tipo_fuerza) = tipoF;
+    char tipoF;
+    scanf("Tipo de fuerza: %c", &tipoF);
+    a->tipo_fuerza = tipoF;
     if (tipoF == 'e'){
-        int valorF = scanf("Valor de fuerza: %d");
+        int valorF;
+        scanf("Valor de fuerza: %d", &valorF);
         a->fuerza = (int*)malloc(sizeof(int));
         a->fuerza = valorF;
     }
     if (tipoF == 'c'){
-        char valorF = scanf("Valor de fuerza: %c");
+        char valorF;
+        scanf("Valor de fuerza: %c", &valorF);
         a->fuerza = (char*)malloc(sizeof(char));
         a->fuerza = valorF;
     }
     if (tipoF == 'f'){
-        float valorF = scanf("Valor de fuerza: %f");
+        float valorF;
+        scanf("Valor de fuerza: %f", &valorF);
         a->fuerza = (float*)malloc(sizeof(float));
         a->fuerza = &valorF;
     }
     
-    char tipoV = scanf("Tipo de velocidad: %c");
+    char tipoV;
+    scanf("Tipo de velocidad: %c", &tipoV);
     a->tipo_velocidad = tipoV;
     if (tipoV == 'e'){
-        int valorV = scanf("Valor de velocidad: %d");
+        int valorV;
+        scanf("Valor de velocidad: %d", &valorV);
         a->velocidad = (int*)malloc(sizeof(int));
         a->velocidad = valorV;
     }
     if (tipoV == 'c'){
-        char valorV = scanf("Valor de velocidad: %c");
+        char valorV;
+        scanf("Valor de velocidad: %c", &valorV);
         a->velocidad = (char*)malloc(sizeof(char));
         a->velocidad = valorV;
     }
     if (tipoV == 'f'){
-        float valorV = scanf("Valor de velocidad: %f");
+        float valorV;
+        scanf("Valor de velocidad: %f", &valorV);
         a->velocidad = (float*)malloc(sizeof(float));
         a->velocidad = &valorV;
     }
 
-    char tipoR = scanf("Tipo de resistencia: %c");
+    char tipoR;
+    scanf("Tipo de resistencia: %c", &tipoR);
     a->tipo_resistencia = tipoR;
     if (tipoR == 'e'){
-        int valorR = scanf("Valor de resistencia: %d");
+        int valorR;
+        scanf("Valor de resistencia: %d", &valorR);
         a->resistencia = (int*)malloc(sizeof(int));
         a->resistencia = valorR;
     }
     if (tipoV == 'c'){
-        char valorR = scanf("Valor de resistencia: %c");
+        char valorR;
+        scanf("Valor de resistencia: %c", &valorR);
         a->resistencia = (char*)malloc(sizeof(char));
         a->resistencia = valorR;
     }
     if (tipoV == 'f'){
-        float valorR = scanf("Valor de resistencia: %f");
+        float valorR;
+        scanf("Valor de resistencia: %f", &valorR);
         a->resistencia = (float*)malloc(sizeof(float));
         a->resistencia = &valorR;
     }
-    int func1 = scanf("Funcion reproducción: %d");
-    int func2 = scanf("Funcion comerHuir: %d");
+    int func1, func2;
+    scanf("Funcion reproducción: %d", &func1);
+    scanf("Funcion comerHuir: %d", &func2);
 
     if (func1 == 1){
         a->reproduccion = ReproduccionSimple;
@@ -225,22 +238,39 @@ int Comparar(Animal* a1, Animal* a2){
         resistencia2 = (int) round(temp);
     }
     
-
     if (fuerza1 > fuerza2){
         an1 +=1;
-    }else{
+    }
+    if (fuerza1 < fuerza2){
         an2 +=1;
     }
+    if (fuerza1 == fuerza2){
+        an1 +=1;
+        an2 +=1;
+    }
+    
     if (velocidad1 > velocidad2){
         an1 +=1;
-    }else{
+    }
+    if (velocidad1 < velocidad2){
         an2 +=1;
     }
+    if (velocidad1 == velocidad2){
+        an1 +=1;
+        an2 +=1;
+    }
+
     if (resistencia1 > resistencia2){
         an1 +=1;
-    }else{
+    }
+    if (resistencia1 < resistencia2){
         an2 +=1;
     }
+    if (resistencia1 == resistencia2){
+        an1 +=1;
+        an2 +=1;
+    }
+
     if (an1 > an2){
         return 1;
     }else{
@@ -249,20 +279,24 @@ int Comparar(Animal* a1, Animal* a2){
 }
 
 void BorrarMundo(Animal** Mundo){
-    int i;
+    int i, j;
     for (i = 0; i < 1000; i++){
+        for (j = 0; j < 1000; j++){
+            free(Mundo[i][j].fuerza);
+            free(Mundo[i][j].velocidad);
+            free(Mundo[i][j].resistencia);
+        }
         free(Mundo[i]);
     }
     free(Mundo);
-    exit(1);
 }
 
 void MostrarMundo(Animal** Mundo){
     printf("0 significa vacío, X significa animal");
     int i, j;
     for (i = 0; i < 1000; i++){
-        for (j = 0; i < 1000; i++){
-            if (Mundo[i] == NULL){
+        for (j = 0; j < 1000; j++){
+            if (Mundo[i][j].fuerza == NULL){
                 printf("0 ");
             }
             else{
