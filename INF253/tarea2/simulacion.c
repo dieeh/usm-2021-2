@@ -15,6 +15,7 @@ int main(){
     for(i = 0; i < n; i++){
         mundo[i] = (Animal*)malloc(n*sizeof(Animal));
     }
+    srand(12345);  //seed del rand()
 
     //menu
     while (programa == true){
@@ -25,7 +26,7 @@ int main(){
         printf("3.- Mostrar el mundo\n");
         printf("4.- Terminar el programa\n");
         printf("----------------\n");
-        input = getchar();
+        input = scanf("Ingrese una opcion del menu: %d");
         if (input == 1){
             
         }
@@ -44,9 +45,9 @@ int main(){
 
 
 
-    for (i = 0; i < n; i++){
-        free(mundo[i]);
-    }
-    free(mundo);
+    //for (i = 0; i < n; i++){  //ya no necesario, se ejecuta
+    //    free(mundo[i]);       //en BorrarMundo()
+    //}
+    //free(mundo);
     return 0;
 }

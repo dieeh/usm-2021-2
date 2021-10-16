@@ -7,3 +7,6 @@ animal.o: Animal.c Animal.h
 
 simulacion.o: simulacion.c
 	gcc -c simulacion.c -o simulacion.o
+
+clean: 
+	rm edit simulacion.out simulacion.o animal.o

@@ -89,10 +89,10 @@ void Borrar(Animal* a){
 void MostrarAnimal(Animal* a){
     int fuerza, velocidad, resistencia;
     if (a->tipo_fuerza = 'e'){
-        fuerza = (int*)a->fuerza;
+        fuerza = *(int*)a->fuerza;
     }
     if (a->tipo_fuerza = 'c'){
-        char temp = (char*)a->fuerza;
+        char temp = *(char*)a->fuerza;
         fuerza = (int)temp;
     }
     if (a->tipo_fuerza = 'f'){
@@ -101,10 +101,10 @@ void MostrarAnimal(Animal* a){
     }
 
     if (a->tipo_velocidad = 'e'){
-        velocidad = (int*)a->velocidad;
+        velocidad = *(int*)a->velocidad;
     }
     if (a->tipo_velocidad = 'c'){
-        char temp = (char*)a->velocidad;
+        char temp = *(char*)a->velocidad;
         velocidad = (int)temp;
     }
     if (a->tipo_velocidad = 'f'){
@@ -113,10 +113,10 @@ void MostrarAnimal(Animal* a){
     }
 
     if (a->tipo_resistencia = 'e'){
-        resistencia = (int*)a->resistencia;
+        resistencia = *(int*)a->resistencia;
     }
     if (a->tipo_resistencia = 'c'){
-        char temp = (char*)a->resistencia;
+        char temp = *(char*)a->resistencia;
         resistencia = (int)temp;
     }
     if (a->tipo_resistencia = 'f'){
@@ -129,18 +129,36 @@ void MostrarAnimal(Animal* a){
     printf("resistencia: %d", resistencia);
 }
 
-void Reproducir(Animal* a1, Animal* a2, Animal* hijo){}
+void Reproducir(Animal* a1, Animal* a2, Animal* hijo){
+    int r = rand();
+    if (r%2 == 0){
+        printf("Usando funcion reproducir de a1");
+        a1->reproduccion(a1, a2, hijo);
+    }else{
+        printf("Usando funcion reproducir de a2");
+        a2->reproduccion(a2, a1, hijo);
+    }
+}
 
-void ComerOHuir(Animal* a1, Animal* a2){}
+void ComerOHuir(Animal* a1, Animal* a2){
+    int r = rand();
+    if (r%2 == 0){
+        printf("Usando funcion ComerOHuir de a1");
+        a1->comerHuir(a1, a2);
+    }else{
+        printf("Usando funcion ComerOHuir de a2");
+        a2->comerHuir(a2, a1);
+    }
+}
 
 int Comparar(Animal* a1, Animal* a2){
     int an1, an2;
     int fuerza1, fuerza2;
     if (a1->tipo_fuerza = 'e'){
-        fuerza1 = (int*)a1->fuerza;
+        fuerza1 = *(int*)a1->fuerza;
     }
     if (a1->tipo_fuerza = 'c'){
-        char temp = (char*)a1->fuerza;
+        char temp = *(char*)a1->fuerza;
         fuerza1 = ((int) temp)/4;
     }
     if (a1->tipo_fuerza = 'f'){
@@ -148,10 +166,10 @@ int Comparar(Animal* a1, Animal* a2){
         fuerza1 = (int) round(temp);
     }
     if (a2->tipo_fuerza = 'e'){
-        fuerza2 = (int*)a2->fuerza;
+        fuerza2 = *(int*)a2->fuerza;
     }
     if (a2->tipo_fuerza = 'c'){
-        char temp = (char*)a2->fuerza;
+        char temp = *(char*)a2->fuerza;
         fuerza2 = ((int) temp)/4;
     }
     if (a2->tipo_fuerza = 'f'){
@@ -161,10 +179,10 @@ int Comparar(Animal* a1, Animal* a2){
 
     int velocidad1, velocidad2;
     if (a1->tipo_velocidad = 'e'){
-        velocidad1 = (int*)a1->velocidad;
+        velocidad1 = *(int*)a1->velocidad;
     }
     if (a1->tipo_velocidad = 'c'){
-        char temp = (char*)a1->velocidad;
+        char temp = *(char*)a1->velocidad;
         velocidad1 = ((int) temp)/4;
     }
     if (a1->tipo_velocidad = 'f'){
@@ -172,10 +190,10 @@ int Comparar(Animal* a1, Animal* a2){
         velocidad1 = (int) round(temp);
     }
     if (a2->tipo_velocidad = 'e'){
-        velocidad2 = (int*)a2->velocidad;
+        velocidad2 = *(int*)a2->velocidad;
     }
     if (a2->tipo_velocidad = 'c'){
-        char temp = (char*)a2->velocidad;
+        char temp = *(char*)a2->velocidad;
         velocidad2 = ((int) temp)/4;
     }
     if (a2->tipo_velocidad = 'f'){
@@ -185,10 +203,10 @@ int Comparar(Animal* a1, Animal* a2){
 
     int resistencia1, resistencia2;
     if (a1->tipo_resistencia = 'e'){
-        resistencia1 = (int*)a1->resistencia;
+        resistencia1 = *(int*)a1->resistencia;
     }
     if (a1->tipo_resistencia = 'c'){
-        char temp = (char*)a1->resistencia;
+        char temp = *(char*)a1->resistencia;
         resistencia1 = ((int) temp)/4;
     }
     if (a1->tipo_resistencia = 'f'){
@@ -196,10 +214,10 @@ int Comparar(Animal* a1, Animal* a2){
         resistencia1 = (int) round(temp);
     }
     if (a2->tipo_resistencia = 'e'){
-        resistencia2 = (int*)a2->resistencia;
+        resistencia2 = *(int*)a2->resistencia;
     }
     if (a2->tipo_resistencia = 'c'){
-        char temp = (char*)a2->resistencia;
+        char temp = *(char*)a2->resistencia;
         resistencia2 = ((int) temp)/4;
     }
     if (a2->tipo_resistencia = 'f'){
@@ -262,10 +280,10 @@ void ReproduccionCruzada(Animal* a1, Animal* a2, Animal* hijo){}
 void ComerSiempre(Animal* a1, Animal* a2){
     int f1, r2;
     if (a1->tipo_fuerza = 'e'){
-        f1 = (int*)a1->fuerza;
+        f1 = *(int*)a1->fuerza;
     }
     if (a1->tipo_fuerza = 'c'){
-        char temp = (char*)a1->fuerza;
+        char temp = *(char*)a1->fuerza;
         f1 = (int) temp;
     }
     if (a1->tipo_fuerza = 'f'){
@@ -273,10 +291,10 @@ void ComerSiempre(Animal* a1, Animal* a2){
         f1 = (int) round(temp);
     }
     if (a2->tipo_resistencia = 'e'){
-        r2 = (int*)a1->resistencia;
+        r2 = *(int*)a1->resistencia;
     }
     if (a2->tipo_resistencia = 'c'){
-        char temp = (char*)a1->resistencia;
+        char temp = *(char*)a1->resistencia;
         r2 = (int) temp;
     }
     if (a2->tipo_resistencia = 'f'){
@@ -288,8 +306,6 @@ void ComerSiempre(Animal* a1, Animal* a2){
     }else{
         Borrar(a2);
     }
-    
-    
 }
 
 void HuirSiempre(Animal* a1, Animal* a2){}
