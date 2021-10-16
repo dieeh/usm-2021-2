@@ -7,18 +7,18 @@
 
 void CrearAnimal(Animal* a){
     char tipoF = scanf("Tipo de fuerza: %c");
-    a->tipo_fuerza = tipoF;
-    if (tipoF == "e"){
+    (a->tipo_fuerza) = tipoF;
+    if (tipoF == 'e'){
         int valorF = scanf("Valor de fuerza: %d");
         a->fuerza = (int*)malloc(sizeof(int));
         a->fuerza = valorF;
     }
-    if (tipoF == "c"){
+    if (tipoF == 'c'){
         char valorF = scanf("Valor de fuerza: %c");
         a->fuerza = (char*)malloc(sizeof(char));
         a->fuerza = valorF;
     }
-    if (tipoF == "f"){
+    if (tipoF == 'f'){
         float valorF = scanf("Valor de fuerza: %f");
         a->fuerza = (float*)malloc(sizeof(float));
         a->fuerza = &valorF;
@@ -26,17 +26,17 @@ void CrearAnimal(Animal* a){
     
     char tipoV = scanf("Tipo de velocidad: %c");
     a->tipo_velocidad = tipoV;
-    if (tipoV == "e"){
+    if (tipoV == 'e'){
         int valorV = scanf("Valor de velocidad: %d");
         a->velocidad = (int*)malloc(sizeof(int));
         a->velocidad = valorV;
     }
-    if (tipoV == "c"){
+    if (tipoV == 'c'){
         char valorV = scanf("Valor de velocidad: %c");
         a->velocidad = (char*)malloc(sizeof(char));
         a->velocidad = valorV;
     }
-    if (tipoV == "f"){
+    if (tipoV == 'f'){
         float valorV = scanf("Valor de velocidad: %f");
         a->velocidad = (float*)malloc(sizeof(float));
         a->velocidad = &valorV;
@@ -44,17 +44,17 @@ void CrearAnimal(Animal* a){
 
     char tipoR = scanf("Tipo de resistencia: %c");
     a->tipo_resistencia = tipoR;
-    if (tipoR == "e"){
+    if (tipoR == 'e'){
         int valorR = scanf("Valor de resistencia: %d");
         a->resistencia = (int*)malloc(sizeof(int));
         a->resistencia = valorR;
     }
-    if (tipoV == "c"){
+    if (tipoV == 'c'){
         char valorR = scanf("Valor de resistencia: %c");
         a->resistencia = (char*)malloc(sizeof(char));
         a->resistencia = valorR;
     }
-    if (tipoV == "f"){
+    if (tipoV == 'f'){
         float valorR = scanf("Valor de resistencia: %f");
         a->resistencia = (float*)malloc(sizeof(float));
         a->resistencia = &valorR;
