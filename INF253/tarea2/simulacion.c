@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h> //bool no funcionaba (? creo que es por la version de C
+//#include <stdbool.h> //bool no funcionaba (? creo que es por la version de C -> **cambiado por un int 0 y 1**
 #include "Animal.h"
 
 void iteracion_temp(Animal** Mundo){
-
+    
 }
 int n = 10;  //cambiar dsps
+Animal** mundo; //matriz global
 int main(){
-    bool programa = true;
+    int programa = 1;
     int i;
-    Animal** mundo;
     mundo = (Animal**)malloc(sizeof(Animal*) * n);
     for(i = 0; i < n; i++){
         mundo[i] = (Animal*)malloc(sizeof(Animal) * n);
@@ -18,7 +18,7 @@ int main(){
     srand(12345);  //seed del rand()
 
     //menu
-    while (programa == true){
+    while (programa == 1){
         int input;
         printf("\n");
         printf("------Menú------\n");
@@ -50,7 +50,7 @@ int main(){
             continue;
         }
         if (input == 4){
-            programa = false;
+            programa = 0;
             BorrarMundo(mundo);
             break;
         }
