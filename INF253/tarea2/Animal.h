@@ -13,6 +13,8 @@ typedef struct Animal{
 
 extern int n;  //tamaño de la matriz
 extern Animal** mundo; //matriz global
+extern Animal* SeleccionarEspacio(Animal* a1, int* bool);
+extern void Intercambiar(Animal* a1, Animal* a2);
 
 void CrearAnimal(Animal* a);
 void Borrar(Animal* a);

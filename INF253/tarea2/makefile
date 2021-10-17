@@ -1,15 +1,15 @@
 
-out.o: simulacion.o animal.o
-	gcc  simulacion.o animal.o -o  out.o -lm
+output.out: simulacion.o animal.o
+	gcc simulacion.o animal.o -o  output.out -Wall -lm
 
 animal.o: Animal.c Animal.h
-	gcc -c Animal.c -o animal.o -lm
+	gcc -c Animal.c -Wall -lm
 
 simulacion.o: simulacion.c
-	gcc -c simulacion.c -o simulacion.o
+	gcc -c simulacion.c -Wall -lm
 
 clean: 
-	rm out.o simulacion.o animal.o
+	rm output.out simulacion.o animal.o
 
 clear:
-	rm out.o simulacion.o animal.o
+	rm output.out simulacion.o animal.o

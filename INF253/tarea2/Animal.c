@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <math.h>
 #include "Animal.h"
 
@@ -145,8 +144,8 @@ void MostrarAnimal(Animal* a){
     }
 }
 
-Animal* SeleccionarEspacio(Animal* a1, int bool){
-    int coord1, coord2, libre =0 ;
+Animal* SeleccionarEspacio(Animal* a1, int* bool){
+    int coord1, coord2, libre = 0 ;
     coord1 = a1->coord1;
     coord2 = a1->coord2;
 
@@ -168,12 +167,13 @@ Animal* SeleccionarEspacio(Animal* a1, int bool){
     }
 
     if (libre == 1){
-        bool = 1;
+        *bool = 1;
         mundo[coord1][coord2].coord1 = coord1;
         mundo[coord1][coord2].coord2 = coord2;
         return &(mundo[coord1][coord2]);
     }else{
-        bool = 0;
+        *bool = 0;
+        return &(mundo[0][0]);
     }
 }
 
@@ -209,7 +209,7 @@ void ComerOHuir(Animal* a1, Animal* a2){
 }
 
 int Comparar(Animal* a1, Animal* a2){
-    int an1, an2;
+    int an1 = 0, an2 = 0;
     int fuerza1, fuerza2;
     if (a1->tipo_fuerza == 'e'){
         fuerza1 = *(int*)a1->fuerza;
@@ -423,6 +423,7 @@ void ComerSiempre(Animal* a1, Animal* a2){
     }
     if (f1 > r2){
         Borrar(a1);
+        Intercambiar(a1, a2);
     }else{
         Borrar(a2);
     }
@@ -527,27 +528,95 @@ void HuirSiempre(Animal* a1, Animal* a2){
 }
 
 void ComerAleatorio(Animal* a1, Animal* a2){
-    int rand1, rand2;
+    int rand1, rand2, int1 = 0, int2 = 0;
     rand1 = rand();
 
-    if (rand1%3 == 0){
-
+    if (rand1%3 == 0){ //fuerza
+        if (a1->tipo_fuerza == 'e'){
+            int1 = *(int*)a1->fuerza;
+        }
+        if (a1->tipo_fuerza == 'c'){
+            char temp = *(char*)a1->fuerza;
+            int1 = ((int) temp)/4;
+        }
+        if (a1->tipo_fuerza == 'f'){
+            float temp = *(float*)a1->fuerza;
+            int1 = (int) round(temp);
+        }
     }
-    if (rand1%3 == 1){
-
+    if (rand1%3 == 1){ //velocidad
+        if (a1->tipo_velocidad == 'e'){
+            int1 = *(int*)a1->velocidad;
+        }
+        if (a1->tipo_velocidad == 'c'){
+            char temp = *(char*)a1->velocidad;
+            int1 = ((int) temp)/4;
+        }
+        if (a1->tipo_velocidad == 'f'){
+            float temp = *(float*)a1->velocidad;
+            int1 = (int) round(temp);
+        }
     }
-    if (rand1%3 == 2){
-
+    if (rand1%3 == 2){ //resistencia
+        if (a1->tipo_resistencia == 'e'){
+            int1 = *(int*)a1->resistencia;
+        }
+        if (a1->tipo_resistencia == 'c'){
+            char temp = *(char*)a1->resistencia;
+            int1 = ((int) temp)/4;
+        }
+        if (a1->tipo_resistencia == 'f'){
+            float temp = *(float*)a1->resistencia;
+            int1 = (int) round(temp);
+        }
     }
 
     rand2 = rand();
-    if (rand2%3 == 0){
+    if (rand2%3 == 0){ //fuerza
+        if (a2->tipo_fuerza == 'e'){
+            int2 = *(int*)a2->fuerza;
+        }
+        if (a2->tipo_fuerza == 'c'){
+            char temp = *(char*)a2->fuerza;
+            int2 = ((int) temp)/4;
+        }
+        if (a2->tipo_fuerza == 'f'){
+            float temp = *(float*)a2->fuerza;
+            int2 = (int) round(temp);
+        }
+    }
+    if (rand2%3 == 1){ //velocidad
+        if (a2->tipo_velocidad == 'e'){
+            int2 = *(int*)a2->velocidad;
+        }
+        if (a2->tipo_velocidad == 'c'){
+            char temp = *(char*)a2->velocidad;
+            int2 = ((int) temp)/4;
+        }
+        if (a2->tipo_velocidad == 'f'){
+            float temp = *(float*)a2->velocidad;
+            int2 = (int) round(temp);
+        }
+    }
+    if (rand2%3 == 2){ //resistencia
+        if (a2->tipo_resistencia == 'e'){
+            int2 = *(int*)a2->resistencia;
+        }
+        if (a2->tipo_resistencia == 'c'){
+            char temp = *(char*)a2->resistencia;
+            int2 = ((int) temp)/4;
+        }
+        if (a2->tipo_resistencia == 'f'){
+            float temp = *(float*)a2->resistencia;
+            int2 = (int) round(temp);
+        }
+    }
 
+    if (int1 > int2){
+        Borrar(a2);
+    }else{
+        Borrar(a1);
+        Intercambiar(a1, a2);
     }
-    if (rand2%3 == 1){
 
-    }
-    if (rand2%3 == 2){
-        
-    }
 }
