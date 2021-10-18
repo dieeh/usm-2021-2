@@ -7,8 +7,8 @@ typedef struct Animal{
 int main(){
 //    Animal* a = (Animal*)malloc(sizeof(Animal));
 
-    int abc = 15;
-    int bde = abc%3;
+    int abc = 8;
+    int bde = abc%4;
     printf("%d", bde);
 
 //    char tipoF;
