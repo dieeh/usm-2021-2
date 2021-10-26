@@ -1,0 +1,165 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage[position=bottom]{subfig}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{verbatim}
+\usepackage[usenames]{color}
+\renewcommand{\algorithmicforall}{\textbf{for each}}
+\setlength\parindent{0pt}
+
+
+\begin{document}
+
+
+
+\begin{minipage}[t]{0.6\textwidth}
+{\Large \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: M. Bugueño -- S. Gallardo}
+
+Universidad Técnica Federico Santa María
+
+Departamento de Inform\'atica -- Octubre 15, 2021.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+%RELLENE CON SUS DATOS PERSONALES:
+\textbf{Ayudantes}\\
+valentina.arostica@sansano.usm.cl\\
+bryan.gonzalezr@usm.cl
+\end{minipage}
+
+\vspace{0.8cm}
+
+\begin{center}
+    \Huge{Pseudocódigo}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%% Fin Header %%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{0.4cm} 
+
+
+\section{¿Qué es el pseudocódigo?}
+Es un lenguaje creado especialmente para la realización de algoritmos; la característica
+principal de éste es que se pensó para el entendimiento del humano y no el de la máquina.
+Por ello es que se considera un lenguaje sencillo. Como todos los algoritmos se deben
+ejecutar en una máquina, es necesario traducir el pseudocódigo a un lenguaje de
+programación, siendo considerado un borrador, por esto es utilizado en textos donde no está
+definido un lenguaje de programación en particular, haciendo de él uno universal.\\
+
+El pseudocódigo es considerado un lenguaje de \textbf{alto nivel} (se caracteriza por
+ser más entendible por el humano que los de un nivel inferior) y posee una estructura
+secuencial.
+
+\section{Características}
+El pseudocódigo comparte muchas características con lenguajes de programación formales, entre las que podemos encontrar:
+\begin{itemize}
+    \item \textbf{Variables: } Son espacios de memoria que pueden cambiar su contenido a lo largo de la ejecución de su pseudocódigo, y se accede a través del identificador (nombre)\\[0.1cm]
+    \textbf{Constantes: } No cambia en el transcurso de la ejecución
+    \item \textbf{Entradas y salidas(INPUT/OUTPUT): } Las entradas son los datos que el usuario
+    ingresa para procesar en el programa. Y las salidas son las respuestas que el
+    programa entrega al usuario.
+    \item \textbf{Instrucciones de control: } Principalmente se utilizan 2: If y for (o foreach), que vienen en el paquete latex que detallaremos más adelante ($\backslash$usepackage\{algorithm\} y $\backslash$usepackage\{algorithmic\})
+\end{itemize}
+\vspace{5cm}
+\section{Paquete \textit{``$algorithm$"} y \textit{``$algorithmic$"}}
+{\LaTeX} es una muy buena herramienta para plasmar pseudocódigo en un pdf, pues existe el paquete $algorithm$, el cual facilita mucho la creacion de pseudocódigo, además de tener un diseño muy estético.
+\subsection{Introduccion a alogorithm}
+Lo primero que deben hacer para trabajar con el paquete, es incluirlo en su código {\LaTeX}, a través de $\backslash$usepackage\{algorithm\} y $\backslash$usepackage\{algorithmic\}. Ambos paquetes son complementarios\\[0.1cm]
+Para comenzar un algoritmo con este paquete, lo primero que debemos hacer es crear el ambiente en el que trabajaremos. Esto se puede ver a mas detalle en el siguiente ejemplo (para ver el código, por favor revise el archivo .tex): 
+\begin{algorithm}[H]
+  \begin{algorithmic}[1]
+        \STATE{\textbf{procedure} $test$}
+        \STATE variable $\leftarrow$ 1
+        
+  \end{algorithmic}
+  \caption{Algoritmo de prueba}
+  \label{alg:SDSA}
+\end{algorithm}
+En el ejemplo podemos apreciar como asignar un valor a una variable, algo que es muy útil para resolver problemas en pseudocódigo. Para cada linea de codigo (que no sea alguna instruccion de control), utilizaremos $\backslash$STATE. Antes de definir nuestra variable, por ejemplo.\\[0.1cm]
+
+También habrán notado que comenzamos con un \textbf{procedure}. Para efectos de este curso, siempre debemos comenzar con \textbf{procedure}, pues es a través de esta sintaxis que definimos el nombre del algoritmo que estamos trabajando, y eventualmente podríamos llamarlo dentro de otro.
+
+\subsection{Condicionales}
+Para utilizar condicionales en el pseudocódigo latex, el paquete viene con un comando incluido. Si queremos utilizarlo, en vez de $\backslash$STATE, debemos utilizar $\backslash$IF, luego escribir los condicionales, y en las lineas siguientes los argumentos del condicional.\\
+Para terminar el condicional, se \textbf{DEBE} colocar un $\backslash$ENDIF\\[0.1cm]
+A continuacion, se mostrará un ejemplo:
+\begin{algorithm}[H]
+  \begin{algorithmic}[1]
+        \STATE{\textbf{procedure} $condicional$}
+        \STATE variable $\leftarrow$ 1
+        \IF{variable == 1}
+        \STATE variable2 $\leftarrow$ 2
+        \ENDIF
+  \end{algorithmic}
+  \caption{Algoritmo de prueba condicional}
+  \label{alg:testing2}
+\end{algorithm}
+Adicionalmente, los condicionales también pueden hacer uso de un else if (como el ``elif" de python), y pueden ser anidados, como se puede ver en el siguiente ejemplo:
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+        \STATE{\textbf{procedure} $condicional compuesto$}
+        \STATE variable $\leftarrow$ 1
+        \IF{variable == 1}
+        \STATE variable2 $\leftarrow$ 2
+        \IF{variable2 == 2}
+        \STATE variable3 $\leftarrow$ 5
+        \ENDIF
+        \ELSIF{variable == 3}
+        \STATE variable2 $\leftarrow$ 3
+        \ENDIF
+  \end{algorithmic}
+  \caption{Condicional compuesto}
+  \label{alg:testing3}
+\end{algorithm}
+\subsection{Ciclos}
+Como ya deben conocer de otros lenguajes de programación, los ciclos principalmente son los for (o foreach en algunos lenguajes), y los while.\\
+En {\LaTeX}, utilizando las librerías anteriormente vistas, podemos escribir los ciclos a través de los comandos $\backslash$FOR y $\backslash$WHILE para representar cada tipo de ciclo. Cabe recalcar que al igual que los condicionales, hace falta cerrar el ciclo.\\[0.1cm]
+Veamos un ejemplo para cada uno:\\
+\begin{minipage}[t]{0.42\textwidth}
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+        \STATE{\textbf{procedure} $usoFor$}
+        \STATE palabra $\leftarrow$ ``Paralelepipedo"
+        \FOR{letra \textbf{in} palabra}
+        \PRINT{letra}
+        \ENDFOR
+  \end{algorithmic}
+  \caption{Ciclo For}
+  \label{alg:testing4}
+\end{algorithm}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[t]{0.42\textwidth}
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+        \STATE{\textbf{procedure} $usoWhile$}
+        \STATE palabra $\leftarrow$ ``Paralelepipedo"
+        \STATE contador $\leftarrow$ 0
+        \WHILE{contador $\leq$ len(palabra)}
+        \PRINT{palabra[contador]}
+        \STATE contador $\leftarrow$ contador+1
+        \ENDWHILE
+  \end{algorithmic}
+  \caption{Ciclo While}
+  \label{alg:testing5}
+\end{algorithm}
+\end{minipage}\\[0.2cm]
+Ps. Notese que en este caso, los algoritmos quedaron uno al lado del otro, esto es posible gracias al ambiente minipage, los invitamos a investigarlo.
+\end{document}

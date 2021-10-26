@@ -1,0 +1,131 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage[position=bottom]{subfig}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{verbatim}
+\usepackage[usenames]{color}
+\setlength\parindent{0pt}
+\begin{document}
+
+\begin{minipage}[t]{0.6\textwidth}
+{\Large \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: M. Bugueño -- S. Gallardo}
+
+Universidad Técnica Federico Santa María
+
+Departamento de Inform\'atica -- Octubre 25, 2021.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\textbf{Ayudantes}\\
+valentina.arostica@sansano.usm.cl\\
+bryan.gonzalezr@usm.cl
+\end{minipage}
+
+\vspace{0.8cm}
+
+\begin{center}
+    \Huge{Actividad colaborativa}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   FIN DEL HEADER
+%   PONGA AQUÍ LOS NOMBRES Y PARALELOS DE LOS INTEGRANTES DEL EQUIPO:
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\begin{table}[h]
+    \begin{tabular}{llll}
+         \textbf{Nombre:}&                   &\textbf{Paralelo:}&                     \\
+         \textbf{Nombre:}&                   &\textbf{Paralelo:}&                     \\
+         \textbf{Nombre:}&                   &\textbf{Paralelo:}&                     \\
+    \end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Instrucciones}
+
+\begin{itemize}
+    \item Deben resolver el desafío propuesto programando en pseudocódigo.
+    \item El desafío se resuelve en equipos (2 o 3 personas). En un equipo pueden haber alumnos de distintos paralelos, no hay problema con eso.
+    \item La solución debe escribirse en \LaTeX usando los paquetes algorithmic y algorithm (los cuales ya están incluidos en este .tex).
+    \item Puede guiarse con el archivo .tex que se encuentra en la carpeta Material de Estudio. Allí tiene ejemplos de pseudocódigo en \LaTeX.
+    \item Su actividad resuelta debe ser entregada en Aula en el apartado correspondiente. Tienen hasta las 23:59 del 25 de octubre para hacer entrega del PDF con la solución.
+    \item Sólo un integrante de su equipo debe hacer entrega de la actividad.
+\end{itemize}
+
+
+\section{Desafío}
+\subsection{Mensaje oculto}
+
+\textbf{Enunciado:} Algunos textos contienen mensajes ocultos. En el contexto de este problema, el mensaje oculto está compuesto de la primera letra de cada palabra en el texto, en el orden en que aparecen.
+
+Dado un String text, compuesto sólo por letras minúsculas y espacios, retorne el mensaje oculto. Una palabra es la secuencia máxima de letras consecutivas. Pueden haber varios espacios entre dos palabras. También, text puede contener solo espacios.
+\vspace{0.5cm}
+
+\textbf{Método:}
+\begin{center}
+    String getMessage(String text)
+\end{center}
+
+\textbf{Ejemplos:}
+\vspace{0.5cm}
+
+a.	text =``compete online design event ratin''\\ Retorna:``coder''
+\vspace{0.5cm}
+
+b.	text = `` c o d e r ''\\ Retorna: ``coder''
+\vspace{0.5cm}
+
+c.	text = `` ''\\ Retorna: ``'
+\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Solución:}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{minipage}{0.6\textwidth}
+\begin{algorithm}[H] %environment; permite texto flotante así no me salta de esta página a otra.
+\begin{algorithmic}[1] %enumera las lineas de código de uno en uno; {algorithmic} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           AQUÍ EMPIEZA EL CÓDIGO DEL ALGORITMO:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\STATE{\textbf{Method} String getMessage(String text)}
+\STATE{  \textit{Empiece a programar aquí }}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           AQUÍ TERMINA EL CÓDIGO DEL ALGORITMO.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{algorithmic}
+\caption{Mensaje oculto} %titulo
+\label{alg:oculto} %etiqueta para referenciar algoritmo en doc.
+\end{algorithm}
+\end{minipage}
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
