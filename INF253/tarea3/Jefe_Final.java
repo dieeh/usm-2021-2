@@ -1,5 +1,5 @@
 package INF253.tarea3;
 
-public class Jefe_Final {
+public class Jefe_Final implements Enemigos {
     
 }

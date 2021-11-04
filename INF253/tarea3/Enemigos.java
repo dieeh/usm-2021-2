@@ -1,5 +1,5 @@
 package INF253.tarea3;
 
-public class Enemigos {
-    
+interface Enemigos {
+    public abstract void combate(Jugador);
 }

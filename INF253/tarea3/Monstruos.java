@@ -1,5 +1,5 @@
 package INF253.tarea3;
 
-public class Monstruos {
+public class Monstruos implements Enemigos {
     
 }

@@ -1,5 +1,5 @@
 package INF253.tarea3;
 
-public class Mago {
+public class Mago extends Jugador {
     
 }

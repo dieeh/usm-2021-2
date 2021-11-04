@@ -1,5 +1,5 @@
 package INF253.tarea3;
 
-public class Druida {
+public class Druida extends Jugador {
     
 }
