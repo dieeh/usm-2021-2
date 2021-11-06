@@ -1,9 +1,8 @@
 package INF253.tarea3;
 
-public class Jefe_Final implements Enemigo {
-    String nombre;
+public class Monstruo implements Enemigo {
     int vida;
-    int dano_base;
+    int dano;
     public void combate(Jugador jugador){
 
     }

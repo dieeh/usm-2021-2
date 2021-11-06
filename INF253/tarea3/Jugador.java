@@ -8,7 +8,7 @@ public abstract class Jugador {
     int inteligencia;
     int energia;
     int mana;
-    List<Mision>;
+    List<?> lista_misiones = new List<Mision>();
     public abstract int ataque();
     public abstract int hechizo();
     public abstract void subir_experiencia();
