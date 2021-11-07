@@ -3,15 +3,15 @@ package INF253.tarea3;
 import java.util.Scanner;
 
 public class Jefe_Final implements Enemigo {
-    String nombre;
-    int vida;
-    int vida_i;
-    int dano_base;
-    int fase;
+    private String nombre;
+    private int vida;
+    private int vida_i;
+    private int dano_base;
+    private int fase;
     public void combate(Jugador jugador){
         System.out.println("¡¡Te haz topado con el Jefe Final!!");
         System.out.println("¡Este Jefe Final se llama " + nombre + "!");
-        while ((jugador.vida != 0)||(vida != 0)){
+        while ((jugador.GetVida()!= 0)||(vida != 0)){
             Scanner input = new Scanner(System.in);
             System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el monstruo!");
             System.out.println("1: Ataque");
@@ -31,7 +31,7 @@ public class Jefe_Final implements Enemigo {
             if (vida <= vida_i/2){
                 fase = 1;
             }
-            jugador.vida = jugador.vida - (dano_base + 2*fase);
+            jugador.SetVida(jugador.GetVida() - (dano_base + 2*fase));
             System.out.println("¡El Jefe final te ha provocado "+ Integer.toString(dano_base + 2*fase) +" puntos de daño!");
         }
     }
@@ -41,6 +41,7 @@ public class Jefe_Final implements Enemigo {
         this.vida = 50;
         this.vida_i = this.vida;
         this.dano_base = 15;
+        this.fase = 2;
     }
 
     public Jefe_Final(String x, int y, int z){
@@ -48,6 +49,7 @@ public class Jefe_Final implements Enemigo {
         this.vida = y;
         this.vida_i = this.vida;
         this.dano_base = z;
+        this.fase = 2;
     }
 }
 

@@ -3,11 +3,11 @@ package INF253.tarea3;
 import java.util.Scanner;
 
 public class Monstruo implements Enemigo {
-    int vida;
-    int dano;
+    private int vida;
+    private int dano;
     public void combate(Jugador jugador){
         System.out.println("¡Te haz topado con un monstruo!");
-        while ((jugador.vida != 0)||(vida != 0)) {
+        while ((jugador.GetVida() != 0)||(vida != 0)) {
             Scanner input = new Scanner(System.in);
             System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el monstruo!");
             System.out.println("1: Ataque");
@@ -24,8 +24,18 @@ public class Monstruo implements Enemigo {
             vida = vida - dmg;
             System.out.println("¡Le haz realizado " + Integer.toString(dmg) + " puntos de daño al monstruo!");
             System.out.println("Ahora atacará el monstruo...");
-            jugador.vida = jugador.vida - dano;
+            jugador.SetVida(jugador.GetVida() - dano);
             System.out.println("¡El monstruo ha realizado "+ Integer.toString(dano) +" puntos de daño!");
         }
+    }
+
+    public Monstruo(int x, int y){
+        this.vida = x;
+        this.dano = y;
+    }
+
+    public Monstruo(){
+        this.vida = 15;
+        this.dano = 5;
     }
 }
