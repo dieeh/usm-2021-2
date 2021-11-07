@@ -1,5 +1,8 @@
 package INF253.tarea3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Jugador {
     String nombre;
     int vida;
@@ -8,8 +11,8 @@ public abstract class Jugador {
     int inteligencia;
     int energia;
     int mana;
-    List<?> lista_misiones = new List<Mision>();
+    List<?> lista_misiones = new ArrayList<Mision>();
     public abstract int ataque();
     public abstract int hechizo();
-    public abstract void subir_experiencia();
+    public abstract void subir_experiencia(int xp);
 }

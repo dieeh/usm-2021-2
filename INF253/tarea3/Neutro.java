@@ -5,7 +5,7 @@ public class Neutro extends NPC {
     int valor;
     int recompensa;
     int ya_dio_mision;
-    public void interaccion(){
+    public void interaccion(Jugador jugador){
         
     }
 }

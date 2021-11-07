@@ -6,7 +6,11 @@ public class Mision {
     int cantidad;
     int recompensa;
     public boolean verificar_requisito(){
-        return true;
+        if (cantidad == valor) {
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
