@@ -27,6 +27,11 @@ public class Monstruo implements Enemigo {
             jugador.SetVida(jugador.GetVida() - dano);
             System.out.println("¡El monstruo ha realizado "+ Integer.toString(dano) +" puntos de daño!");
         }
+        if (jugador.GetVida() <= 0) {
+            System.out.println("Haz sido derrotado por el monstruo...");
+        } else if (vida <= 0){
+            System.out.println("¡Haz ganado esta batalla!");
+        }
     }
 
     public Monstruo(int x, int y){

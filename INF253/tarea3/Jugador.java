@@ -11,6 +11,9 @@ public abstract class Jugador {
     private int inteligencia;
     private int energia;
     private int mana;
+    private int vida_max;
+    private int energia_max;
+    private int mana_max;
     private List<?> lista_misiones = new ArrayList<Mision>();
     public abstract int ataque();
     public abstract int hechizo();
@@ -61,5 +64,23 @@ public abstract class Jugador {
     }
     public void SetMana(int x){
         mana = x;
+    }
+    public int GetVidaMax(){
+        return vida_max;
+    }
+    public void SetVidaMax(int x){
+        vida_max = x;
+    }
+    public int GetEnergiaMax(){
+        return energia_max;
+    }
+    public void SetEnergiaMax(int x){
+        energia_max = x;
+    }
+    public int GetManaMax(){
+        return mana_max;
+    }
+    public void SetManaMax(int x){
+        mana_max = x;
     }
 }

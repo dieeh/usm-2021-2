@@ -13,7 +13,7 @@ public class Jefe_Final implements Enemigo {
         System.out.println("¡Este Jefe Final se llama " + nombre + "!");
         while ((jugador.GetVida()!= 0)||(vida != 0)){
             Scanner input = new Scanner(System.in);
-            System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el monstruo!");
+            System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el Jefe Final!");
             System.out.println("1: Ataque");
             System.out.println("2: Hechizo");
             int eleccion = input.nextInt();
@@ -32,7 +32,12 @@ public class Jefe_Final implements Enemigo {
                 fase = 1;
             }
             jugador.SetVida(jugador.GetVida() - (dano_base + 2*fase));
-            System.out.println("¡El Jefe final te ha provocado "+ Integer.toString(dano_base + 2*fase) +" puntos de daño!");
+            System.out.println("¡El Jefe Final te ha provocado "+ Integer.toString(dano_base + 2*fase) +" puntos de daño!");
+        }
+        if (jugador.GetVida() <= 0) {
+            System.out.println("Haz perdido...");
+        } else if (vida <= 0){
+            System.out.println("¡Haz vencido al Jefe Final!");
         }
     }
 

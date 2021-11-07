@@ -2,10 +2,6 @@ package INF253.tarea3;
 
 public class Guerrero extends Jugador {
     private int level;
-    private int vida_max;
-    private int energia_max;
-    private int mana_max;
-
     public int ataque(){
         if (GetEnergia() == 0) {
             return 0;
@@ -26,60 +22,68 @@ public class Guerrero extends Jugador {
     public void subir_experiencia(int xp){
         if ((level == 1)&&(xp>=10) ) {
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 2!"); //ARREGLAR ESTA WEA
         } else if ((level == 2)&&(xp>=25)){
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 3!");
         } else if ((level == 3)&&(xp>=50)){
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 4!");
         } else if ((level == 4)&&(xp>=100)){
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 5!");
         } else if ((level == 5)&&(xp>=200)){
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 6!");
         } else if ((level == 6)&&(xp>=350)){
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 7!");
         } else if ((level == 7)&&(xp>=600)){
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 8!");
         } else if ((level == 8)&&(xp>=900)){
             level +=1;
-            vida_max += 3*level;
+            SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
-            energia_max += 2*level;
-            mana_max +=1;
+            SetEnergiaMax(GetEnergiaMax() + 2*level);
+            SetManaMax(GetManaMax()+ 1);
+            System.out.println("¡Haz subido al nivel 9!");
         }
     }
 
@@ -92,8 +96,9 @@ public class Guerrero extends Jugador {
         SetInteligencia(1);
         SetEnergia(10);
         SetMana(2);
-        this.vida_max = 20;
-        this.energia_max = 10;
-        this.mana_max = 2;
+        SetVidaMax(20);
+        SetEnergiaMax(10);
+        SetManaMax(2);
     }
+
 }
