@@ -4,7 +4,7 @@ public class Bueno extends NPC {
     private String atributo;
     private int cantidad;
     public void interaccion(Jugador jugador){
-        System.out.println(GetNombre() +": Creo que necesitas un poco de ayuda, te subiré "+Integer.toString(cantidad)+" a tu "+atributo+"!!!!");
+        System.out.println(GetNombre() +": Creo que necesitas un poco de ayuda, ¡te subiré "+Integer.toString(cantidad)+" puntos a tu "+atributo+"!");
         if (atributo == "vida") {
             jugador.SetVida(jugador.GetVida() + cantidad);
         } else if (atributo == "xp"){

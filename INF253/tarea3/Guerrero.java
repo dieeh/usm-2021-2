@@ -1,7 +1,11 @@
 package INF253.tarea3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Guerrero extends Jugador {
     private int level;
+    private List<Mision> lista_misiones = new ArrayList<Mision>();
     public int ataque(){
         if (GetEnergia() == 0) {
             return 0;
@@ -20,15 +24,15 @@ public class Guerrero extends Jugador {
         return retorno2;
     }
     public void subir_experiencia(int xp){
-        if ((level == 1)&&(xp>=10) ) {
+        if ((level == 1)&&((25>xp)&&(xp>=10)) ) {
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
             SetInteligencia(GetInteligencia() + 1);
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
-            System.out.println("¡Haz subido al nivel 2!"); //ARREGLAR ESTA WEA
-        } else if ((level == 2)&&(xp>=25)){
+            System.out.println("¡Haz subido al nivel 2!");
+        } else if ((level == 2)&&((50>xp)&&(xp>=25))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
@@ -36,7 +40,7 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 3!");
-        } else if ((level == 3)&&(xp>=50)){
+        } else if ((level == 3)&&((100>xp)&&(xp>=50))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
@@ -44,7 +48,7 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 4!");
-        } else if ((level == 4)&&(xp>=100)){
+        } else if ((level == 4)&&((200>xp)&&(xp>=100))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
@@ -52,7 +56,7 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 5!");
-        } else if ((level == 5)&&(xp>=200)){
+        } else if ((level == 5)&&((350>xp)&&(xp>=200))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
@@ -60,7 +64,7 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 6!");
-        } else if ((level == 6)&&(xp>=350)){
+        } else if ((level == 6)&&((600>xp)&&(xp>=350))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
@@ -68,7 +72,7 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 7!");
-        } else if ((level == 7)&&(xp>=600)){
+        } else if ((level == 7)&&((900>xp)&&(xp>=600))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
             SetFuerza(GetFuerza() + 5*level);
@@ -76,20 +80,12 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 8!");
-        } else if ((level == 8)&&(xp>=900)){
-            level +=1;
-            SetVidaMax(GetVidaMax() + 3*level);
-            SetFuerza(GetFuerza() + 5*level);
-            SetInteligencia(GetInteligencia() + 1);
-            SetEnergiaMax(GetEnergiaMax() + 2*level);
-            SetManaMax(GetManaMax()+ 1);
-            System.out.println("¡Haz subido al nivel 9!");
         }
     }
 
     public Guerrero(String x){
         SetNombre(x);
-        SetFuerza(20);
+        SetVida(20);
         SetXP(0);
         this.level = 1;
         SetFuerza(9);
