@@ -3,7 +3,9 @@ package INF253.tarea3;
 import java.util.Scanner;
 
 public class Main{
+    
     public static void main(String[] args) {
+        System.out.println("<===== Menú del DM =====>");
         System.out.println("Selecciona el tamaño del mundo:");
         Scanner input = new Scanner(System.in);
         int tamano = input.nextInt();
@@ -29,7 +31,7 @@ public class Main{
                         int vida_m = input.nextInt();
                         System.out.println("¿Cantidad de daño del monstruo?");
                         int dano_m = input.nextInt();
-                        Monstruo temp1 = new Monstruo(vida_m, dano_m);
+                        Monstruo temp = new Monstruo(vida_m, dano_m);
                         //NPC temp2;
                         System.out.println("¿Qué tipo de NPC quieres en esta casilla?");
                         System.out.println("1: Bueno");
@@ -44,7 +46,7 @@ public class Main{
                             System.out.println("¿En cuánto aumentará este atributo?");
                             int cantidadNPC = input.nextInt();
                             NPC temp2 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
-                            mundo[i] = new Montana(temp1, temp2);
+                            mundo[i] = new Montana(temp, temp2);
                         } else if (tipoNPC == 2){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -53,7 +55,7 @@ public class Main{
                             System.out.println("¿En cuánto bajará el maná este NPC?");
                             int manaNPC = input.nextInt();
                             NPC temp2 = new Malo(nameNPC, energiaNPC, manaNPC);
-                            mundo[i] = new Montana(temp1, temp2);
+                            mundo[i] = new Montana(temp, temp2);
                         } else if (tipoNPC == 3){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -64,7 +66,7 @@ public class Main{
                             System.out.println("¿Cuál será la cantidad de xp que se entregará como recompensa?");
                             int recomNPC = input.nextInt();
                             NPC temp2 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
-                            mundo[i] = new Montana(temp1, temp2);
+                            mundo[i] = new Montana(temp, temp2);
                         }
                         //mundo[i] = new Montana(temp1, temp2);
                     } else if (siono == 2){
@@ -72,8 +74,8 @@ public class Main{
                         int vida_m = input.nextInt();
                         System.out.println("¿Cantidad de daño del monstruo?");
                         int dano_m = input.nextInt();
-                        Monstruo temp1 = new Monstruo(vida_m, dano_m);
-                        mundo[i] = new Montana(temp1);
+                        Monstruo temp = new Monstruo(vida_m, dano_m);
+                        mundo[i] = new Montana(temp);
                     }
                 } else if (mon_jefe == 2){
                     System.out.println("¿Quieres un que haya un NPC en esta casilla?");
@@ -87,7 +89,7 @@ public class Main{
                         int vida_j = input.nextInt();
                         System.out.println("¿Cantidad de daño base del Jefe Final?");
                         int dano_j = input.nextInt();
-                        Jefe_Final temp3 = new Jefe_Final(nombre_j, vida_j, dano_j);
+                        Jefe_Final temp = new Jefe_Final(nombre_j, vida_j, dano_j);
                         //NPC temp4;
                         System.out.println("¿Qué tipo de NPC quieres en esta casilla?");
                         System.out.println("1: Bueno");
@@ -101,8 +103,8 @@ public class Main{
                             String atributoNPC = input.nextLine();
                             System.out.println("¿En cuánto aumentará este atributo?");
                             int cantidadNPC = input.nextInt();
-                            NPC temp4 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
-                            mundo[i] = new Montana(temp3, temp4);
+                            NPC temp2 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
+                            mundo[i] = new Montana(temp, temp2);
                         } else if (tipoNPC == 2){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -110,8 +112,8 @@ public class Main{
                             int energiaNPC = input.nextInt();
                             System.out.println("¿En cuánto bajará el maná este NPC?");
                             int manaNPC = input.nextInt();
-                            NPC temp4 = new Malo(nameNPC, energiaNPC, manaNPC);
-                            mundo[i] = new Montana(temp3, temp4);
+                            NPC temp2 = new Malo(nameNPC, energiaNPC, manaNPC);
+                            mundo[i] = new Montana(temp, temp2);
                         } else if (tipoNPC == 3){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -121,8 +123,8 @@ public class Main{
                             int valorNPC = input.nextInt();
                             System.out.println("¿Cuál será la cantidad de xp que se entregará como recompensa?");
                             int recomNPC = input.nextInt();
-                            NPC temp4 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
-                            mundo[i] = new Montana(temp3, temp4);
+                            NPC temp2 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
+                            mundo[i] = new Montana(temp, temp2);
                         }
                         //mundo[i] = new Montana(temp3, temp4);
                     } else if (siono == 2){
@@ -132,8 +134,8 @@ public class Main{
                         int vida_j = input.nextInt();
                         System.out.println("¿Cantidad de daño base del Jefe Final?");
                         int dano_j = input.nextInt();
-                        Jefe_Final temp3 = new Jefe_Final(nombre_j, vida_j, dano_j);
-                        mundo[i] = new Montana(temp3);
+                        Jefe_Final temp = new Jefe_Final(nombre_j, vida_j, dano_j);
+                        mundo[i] = new Montana(temp);
                     }
                 }
                 
@@ -153,7 +155,7 @@ public class Main{
                         int vida_m = input.nextInt();
                         System.out.println("¿Cantidad de daño del monstruo?");
                         int dano_m = input.nextInt();
-                        Monstruo temp5 = new Monstruo(vida_m, dano_m);
+                        Monstruo temp = new Monstruo(vida_m, dano_m);
                         //NPC temp6;
                         System.out.println("¿Qué tipo de NPC quieres en esta casilla?");
                         System.out.println("1: Bueno");
@@ -167,8 +169,8 @@ public class Main{
                             String atributoNPC = input.nextLine();
                             System.out.println("¿En cuánto aumentará este atributo?");
                             int cantidadNPC = input.nextInt();
-                            NPC temp6 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
-                            mundo[i] = new Planicie(temp5, temp6);
+                            NPC temp2 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
+                            mundo[i] = new Planicie(temp, temp2);
                         } else if (tipoNPC == 2){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -176,8 +178,8 @@ public class Main{
                             int energiaNPC = input.nextInt();
                             System.out.println("¿En cuánto bajará el maná este NPC?");
                             int manaNPC = input.nextInt();
-                            NPC temp6 = new Malo(nameNPC, energiaNPC, manaNPC);
-                            mundo[i] = new Planicie(temp5, temp6);
+                            NPC temp2 = new Malo(nameNPC, energiaNPC, manaNPC);
+                            mundo[i] = new Planicie(temp, temp2);
                         } else if (tipoNPC == 3){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -187,8 +189,8 @@ public class Main{
                             int valorNPC = input.nextInt();
                             System.out.println("¿Cuál será la cantidad de xp que se entregará como recompensa?");
                             int recomNPC = input.nextInt();
-                            NPC temp6 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
-                            mundo[i] = new Planicie(temp5, temp6);
+                            NPC temp2 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
+                            mundo[i] = new Planicie(temp, temp2);
                         }
                         //mundo[i] = new Planicie(temp5, temp6);
                     } else if (siono == 2){
@@ -196,8 +198,8 @@ public class Main{
                         int vida_m = input.nextInt();
                         System.out.println("¿Cantidad de daño del monstruo?");
                         int dano_m = input.nextInt();
-                        Monstruo temp5 = new Monstruo(vida_m, dano_m);
-                        mundo[i] = new Planicie(temp5);
+                        Monstruo temp = new Monstruo(vida_m, dano_m);
+                        mundo[i] = new Planicie(temp);
                     }
                 } else if (mon_jefe == 2){
                     System.out.println("¿Quieres un que haya un NPC en esta casilla?");
@@ -211,7 +213,7 @@ public class Main{
                         int vida_j = input.nextInt();
                         System.out.println("¿Cantidad de daño base del Jefe Final?");
                         int dano_j = input.nextInt();
-                        Jefe_Final temp7 = new Jefe_Final(nombre_j, vida_j, dano_j);
+                        Jefe_Final temp = new Jefe_Final(nombre_j, vida_j, dano_j);
                         //NPC temp8;
                         System.out.println("¿Qué tipo de NPC quieres en esta casilla?");
                         System.out.println("1: Bueno");
@@ -225,8 +227,8 @@ public class Main{
                             String atributoNPC = input.nextLine();
                             System.out.println("¿En cuánto aumentará este atributo?");
                             int cantidadNPC = input.nextInt();
-                            NPC temp8 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
-                            mundo[i] = new Planicie(temp7, temp8);
+                            NPC temp2 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
+                            mundo[i] = new Planicie(temp, temp2);
                         } else if (tipoNPC == 2){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -234,8 +236,8 @@ public class Main{
                             int energiaNPC = input.nextInt();
                             System.out.println("¿En cuánto bajará el maná este NPC?");
                             int manaNPC = input.nextInt();
-                            NPC temp8 = new Malo(nameNPC, energiaNPC, manaNPC);
-                            mundo[i] = new Planicie(temp7, temp8);
+                            NPC temp2 = new Malo(nameNPC, energiaNPC, manaNPC);
+                            mundo[i] = new Planicie(temp, temp2);
                         } else if (tipoNPC == 3){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -245,8 +247,8 @@ public class Main{
                             int valorNPC = input.nextInt();
                             System.out.println("¿Cuál será la cantidad de xp que se entregará como recompensa?");
                             int recomNPC = input.nextInt();
-                            NPC temp8 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
-                            mundo[i] = new Planicie(temp7, temp8);
+                            NPC temp2 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
+                            mundo[i] = new Planicie(temp, temp2);
                         }
                         //mundo[i] = new Planicie(temp7, temp8);
                     } else if (siono == 2){
@@ -256,8 +258,8 @@ public class Main{
                         int vida_j = input.nextInt();
                         System.out.println("¿Cantidad de daño base del Jefe Final?");
                         int dano_j = input.nextInt();
-                        Jefe_Final temp7 = new Jefe_Final(nombre_j, vida_j, dano_j);
-                        mundo[i] = new Planicie(temp7);
+                        Jefe_Final temp = new Jefe_Final(nombre_j, vida_j, dano_j);
+                        mundo[i] = new Planicie(temp);
                     }
                 }
 
@@ -276,7 +278,7 @@ public class Main{
                         int vida_m = input.nextInt();
                         System.out.println("¿Cantidad de daño del monstruo?");
                         int dano_m = input.nextInt();
-                        Monstruo temp9 = new Monstruo(vida_m, dano_m);
+                        Monstruo temp = new Monstruo(vida_m, dano_m);
                         //NPC temp0;
                         System.out.println("¿Qué tipo de NPC quieres en esta casilla?");
                         System.out.println("1: Bueno");
@@ -290,8 +292,8 @@ public class Main{
                             String atributoNPC = input.nextLine();
                             System.out.println("¿En cuánto aumentará este atributo?");
                             int cantidadNPC = input.nextInt();
-                            NPC temp0 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
-                            mundo[i] = new Bosque(temp9, temp0);
+                            NPC temp2 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
+                            mundo[i] = new Bosque(temp, temp2);
                         } else if (tipoNPC == 2){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -299,8 +301,8 @@ public class Main{
                             int energiaNPC = input.nextInt();
                             System.out.println("¿En cuánto bajará el maná este NPC?");
                             int manaNPC = input.nextInt();
-                            NPC temp0 = new Malo(nameNPC, energiaNPC, manaNPC);
-                            mundo[i] = new Bosque(temp9, temp0);
+                            NPC temp2 = new Malo(nameNPC, energiaNPC, manaNPC);
+                            mundo[i] = new Bosque(temp, temp2);
                         } else if (tipoNPC == 3){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -310,8 +312,8 @@ public class Main{
                             int valorNPC = input.nextInt();
                             System.out.println("¿Cuál será la cantidad de xp que se entregará como recompensa?");
                             int recomNPC = input.nextInt();
-                            NPC temp0 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
-                            mundo[i] = new Bosque(temp9, temp0);
+                            NPC temp2 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
+                            mundo[i] = new Bosque(temp, temp2);
                         }
                         //mundo[i] = new Bosque(temp9, temp0);
                     } else if (siono == 2){
@@ -319,8 +321,8 @@ public class Main{
                         int vida_m = input.nextInt();
                         System.out.println("¿Cantidad de daño del monstruo?");
                         int dano_m = input.nextInt();
-                        Monstruo temp9 = new Monstruo(vida_m, dano_m);
-                        mundo[i] = new Bosque(temp9);
+                        Monstruo temp = new Monstruo(vida_m, dano_m);
+                        mundo[i] = new Bosque(temp);
                     }
                 } else if (mon_jefe == 2){
                     System.out.println("¿Quieres un que haya un NPC en esta casilla?");
@@ -334,7 +336,7 @@ public class Main{
                         int vida_j = input.nextInt();
                         System.out.println("¿Cantidad de daño base del Jefe Final?");
                         int dano_j = input.nextInt();
-                        Jefe_Final temp10 = new Jefe_Final(nombre_j, vida_j, dano_j);
+                        Jefe_Final temp = new Jefe_Final(nombre_j, vida_j, dano_j);
                         //NPC temp11;
                         System.out.println("¿Qué tipo de NPC quieres en esta casilla?");
                         System.out.println("1: Bueno");
@@ -348,8 +350,8 @@ public class Main{
                             String atributoNPC = input.nextLine();
                             System.out.println("¿En cuánto aumentará este atributo?");
                             int cantidadNPC = input.nextInt();
-                            NPC temp11 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
-                            mundo[i] = new Bosque(temp10, temp11);
+                            NPC temp2 = new Bueno(nameNPC, atributoNPC, cantidadNPC);
+                            mundo[i] = new Bosque(temp, temp2);
                         } else if (tipoNPC == 2){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -357,8 +359,8 @@ public class Main{
                             int energiaNPC = input.nextInt();
                             System.out.println("¿En cuánto bajará el maná este NPC?");
                             int manaNPC = input.nextInt();
-                            NPC temp11 = new Malo(nameNPC, energiaNPC, manaNPC);
-                            mundo[i] = new Bosque(temp10, temp11);
+                            NPC temp2 = new Malo(nameNPC, energiaNPC, manaNPC);
+                            mundo[i] = new Bosque(temp, temp2);
                         } else if (tipoNPC == 3){
                             System.out.println("¿Qué nombre tendrá este NPC?");
                             String nameNPC = input.nextLine();
@@ -368,8 +370,8 @@ public class Main{
                             int valorNPC = input.nextInt();
                             System.out.println("¿Cuál será la cantidad de xp que se entregará como recompensa?");
                             int recomNPC = input.nextInt();
-                            NPC temp11 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
-                            mundo[i] = new Bosque(temp10, temp11);
+                            NPC temp2 = new Neutro(nameNPC, requisitoNPC, valorNPC, recomNPC);
+                            mundo[i] = new Bosque(temp, temp2);
                         }
                         //mundo[i] = new Bosque(temp10, temp11);
                     } else if (siono == 2){
@@ -379,12 +381,16 @@ public class Main{
                         int vida_j = input.nextInt();
                         System.out.println("¿Cantidad de daño base del Jefe Final?");
                         int dano_j = input.nextInt();
-                        Jefe_Final temp10 = new Jefe_Final(nombre_j, vida_j, dano_j);
-                        mundo[i] = new Bosque(temp10);
+                        Jefe_Final temp = new Jefe_Final(nombre_j, vida_j, dano_j);
+                        mundo[i] = new Bosque(temp);
                     }
                 }
-
             }
         }
+        System.out.println("¿En cuál casilla empezará el jugador (0-"+Integer.toString(tamano-1)+") ?");
+        int casilla_init = input.nextInt();
+        System.out.println("<===== Fin del menú del DM =====>");
+
+        System.out.println("<===== Menú del Jugador =====>");
     }
 }   
