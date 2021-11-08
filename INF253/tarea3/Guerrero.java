@@ -32,6 +32,9 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 2!");
+            SetVida(GetVidaMax());
+            SetEnergia(GetEnergiaMax());
+            SetMana(GetManaMax());
         } else if ((level == 2)&&((50>xp)&&(xp>=25))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
@@ -40,6 +43,9 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 3!");
+            SetVida(GetVidaMax());
+            SetEnergia(GetEnergiaMax());
+            SetMana(GetManaMax());
         } else if ((level == 3)&&((100>xp)&&(xp>=50))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
@@ -48,6 +54,9 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 4!");
+            SetVida(GetVidaMax());
+            SetEnergia(GetEnergiaMax());
+            SetMana(GetManaMax());
         } else if ((level == 4)&&((200>xp)&&(xp>=100))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
@@ -56,6 +65,9 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 5!");
+            SetVida(GetVidaMax());
+            SetEnergia(GetEnergiaMax());
+            SetMana(GetManaMax());
         } else if ((level == 5)&&((350>xp)&&(xp>=200))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
@@ -64,6 +76,9 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 6!");
+            SetVida(GetVidaMax());
+            SetEnergia(GetEnergiaMax());
+            SetMana(GetManaMax());
         } else if ((level == 6)&&((600>xp)&&(xp>=350))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
@@ -72,6 +87,9 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 7!");
+            SetVida(GetVidaMax());
+            SetEnergia(GetEnergiaMax());
+            SetMana(GetManaMax());
         } else if ((level == 7)&&((900>xp)&&(xp>=600))){
             level +=1;
             SetVidaMax(GetVidaMax() + 3*level);
@@ -80,6 +98,9 @@ public class Guerrero extends Jugador {
             SetEnergiaMax(GetEnergiaMax() + 2*level);
             SetManaMax(GetManaMax()+ 1);
             System.out.println("¡Haz subido al nivel 8!");
+            SetVida(GetVidaMax());
+            SetEnergia(GetEnergiaMax());
+            SetMana(GetManaMax());
         }
     }
 
