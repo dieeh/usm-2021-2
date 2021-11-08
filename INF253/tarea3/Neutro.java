@@ -39,7 +39,7 @@ public class Neutro extends NPC {
         }
     }
 
-    public Neutro(String v, char x, int y, int z, int w){
+    public Neutro(String v, char x, int y, int z){
         SetNombre(v);
         this.requisito = x;
         this.valor = y;

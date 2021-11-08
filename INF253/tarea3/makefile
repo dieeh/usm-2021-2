@@ -1,18 +1,8 @@
 
-Main.class: Jugador.class NPC.class Enemigo.class Tierra.class
-	javac Main.java Jugador.class NPC.class Enemigo.class Tierra.class
+Main.class: 
+	javac Main.java Mision.java Jugador.java Mago.java Guerrero.java Druida.java NPC.java Bueno.java Malo.java Neutro.java Enemigo.java Monstruo.java Jefe_Final.java Tierra.java Montana.java Planicie.java Bosque.java
 
-Jugador.class: Jugador.java Mago.java Guerrero.java Druida.java Mision.java
-	javac Jugador.java Mago.java Guerrero.java Druida.java Mision.java
 
-NPC.class: NPC.java Bueno.java Malo.java Neutro.java Jugador.class
-	javac NPC.java Bueno.java Malo.java Neutro.java Jugador.class
-
-Enemigo.class: Monstruo.java Jefe_Final.java Jugador.class
-	javac Monstruo.java Jefe_Final.java Jugador.class
-
-Tierra.class: Montana.java Planicie.java Bosque.java
-	javac Montana.java Planicie.java Bosque.java
 
 clear:
 	rm *.class
