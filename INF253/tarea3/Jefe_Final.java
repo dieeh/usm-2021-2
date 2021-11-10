@@ -11,7 +11,7 @@ public class Jefe_Final implements Enemigo {
     public void combate(Jugador jugador){
         System.out.println("¡¡Te has topado con el Jefe Final!!");
         System.out.println("¡Este Jefe Final se llama " + nombre + "!");
-        while ((jugador.GetVida()!= 0)||(vida != 0)){
+        while ((jugador.GetVida()!= 0)&&(vida != 0)){
             Scanner input = new Scanner(System.in);
             System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el Jefe Final!");
             System.out.println("1: Ataque");

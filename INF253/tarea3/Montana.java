@@ -1,5 +1,7 @@
 package INF253.tarea3;
 
+import java.util.Random;
+
 public class Montana extends Tierra{
     
     public boolean accion(Jugador jugador){
@@ -17,8 +19,9 @@ public class Montana extends Tierra{
             if (GetNPC() != null) {
                 GetNPC().interaccion(jugador);
             }
-            SetPosi((float) ((Math.random() * (1.0 - 0.0)) + 0.0));
-            if(GetPosi() > 0.5){
+            int temp = (int) GetPosi()*100;
+            boolean probabilidad = new Random().nextInt(100) < temp ;
+            if(probabilidad == true){
                 if (GetMonstruo() != null) {
                     //System.out.println("¡Ha aparecido un monstruo!");
                     GetMonstruo().combate(jugador);
@@ -31,19 +34,23 @@ public class Montana extends Tierra{
         return true;
     }
 
-    public Montana(Monstruo mons){
+    public Montana(Monstruo mons, float prob){
+        SetPosi(prob);
         SetMonstruo(mons);
         SetNPC(null);
     }
-    public Montana(Jefe_Final mons){
+    public Montana(Jefe_Final mons, float prob){
+        SetPosi(prob);
         SetJefe(mons);
         SetNPC(null);
     }
-    public Montana(Monstruo mons, NPC we ){
+    public Montana(Monstruo mons, NPC we, float prob ){
+        SetPosi(prob);
         SetMonstruo(mons);
         SetNPC(we);
     }
-    public Montana(Jefe_Final mons, NPC we ){
+    public Montana(Jefe_Final mons, NPC we, float prob ){
+        SetPosi(prob);
         SetJefe(mons);
         SetNPC(we);
     }

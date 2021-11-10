@@ -10,18 +10,14 @@ public class Neutro extends NPC {
     public void interaccion(Jugador jugador){
         if (ya_dio_mision == 0) {
             Scanner input = new Scanner(System.in);
-            String tipo1 = "llegar a la casilla ";
-            String tipo2 = "matar una cantidad de ";
-            String tipo3 = " del mundo ";
-            String tipo4 = " Monstruos ";
-            String text1 = "";
-            String text2 = "";
+            String text1;
+            String text2;
             if (requisito == 'v') {
-                text1 = tipo1;
-                text2 = tipo3;
-            } else if (requisito == 'm'){
-                text1 = tipo2;
-                text2 = tipo4;
+                text1 = "llegar a la casilla ";
+                text2 = " del mundo ";
+            } else{
+                text1 = "matar una cantidad de ";
+                text2 = " Monstruos ";
             }
             System.out.println(GetNombre() +": ¡Hola!, ¿Quieres cumplir esta misión? Deberás "+text1+Integer.toString(valor)+text2+"y recibirás "+Integer.toString(recompensa)+ " de experiencia.");
             System.out.println(GetNombre() +": Entonces, ¿aceptas? (Y/n)");

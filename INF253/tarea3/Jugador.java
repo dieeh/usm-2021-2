@@ -1,6 +1,7 @@
 package INF253.tarea3;
 
-//import java.util.ArrayList;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Jugador {
@@ -82,6 +83,9 @@ public abstract class Jugador {
     }
     public void SetManaMax(int x){
         mana_max = x;
+    }
+    public void InitMisiones(){
+        lista_misiones = new ArrayList<Mision>();
     }
     public List<Mision> GetMisiones(){
         return lista_misiones;

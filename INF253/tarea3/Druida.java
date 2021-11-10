@@ -1,15 +1,17 @@
 package INF253.tarea3;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 //import java.util.Set;
 
 public class Druida extends Jugador {
     private int level = 1;
-    private List<Mision> lista_misiones = new ArrayList<Mision>();
+    //private List<Mision> lista_misiones = new ArrayList<Mision>();
 
     public int ataque(){
-        if (GetEnergia() == 0) {
+        if (GetEnergia() <= 0) {
+            System.out.println("<< ¡No te queda energía! >>");
+            SetEnergia(0);
             return 0;
         }
         int v_fyi = (GetFuerza() + GetInteligencia()) / 3;
@@ -19,17 +21,19 @@ public class Druida extends Jugador {
         return retorno;
     }
     public int hechizo(){
-        if (GetMana() == 0) {
+        if (GetMana() <= 0) {
+            System.out.println("<< ¡No te queda maná! >>");
+            SetMana(0);
             return 0;
         }
         int v_fyi = (GetFuerza() + GetInteligencia()) / 3;
         int v_em = Math.max(GetEnergia()/2, GetMana()/3);
         int retorno = v_fyi * v_em;
-        SetMana(GetMana() - 3);;
+        SetMana(GetMana() - 3);
         return retorno;
     }
     public void subir_experiencia(int xp){
-        if ((level == 1)&&((25>xp)&&(xp>=10)) ) {
+        if ((level == 1)&&(((25>xp)&&(xp>=10) )|| (xp >25) )) {
             level +=1;
             SetVidaMax(GetVidaMax() + level);
             SetFuerza(GetFuerza() + level);
@@ -40,7 +44,8 @@ public class Druida extends Jugador {
             SetVida(GetVidaMax());
             SetEnergia(GetEnergiaMax());
             SetMana(GetManaMax());
-        } else if ((level == 2)&&((50>xp)&&(xp>=25))){
+        }
+        if ((level == 2) && (((50>xp)&&(xp>=25))|| (xp >50) )){
             level +=1;
             SetVidaMax(GetVidaMax() + level);
             SetFuerza(GetFuerza() + level);
@@ -51,7 +56,8 @@ public class Druida extends Jugador {
             SetVida(GetVidaMax());
             SetEnergia(GetEnergiaMax());
             SetMana(GetManaMax());
-        } else if ((level == 3)&&((100>xp)&&(xp>=50))){
+        } 
+        if ((level == 3)&&(((100>xp)&&(xp>=50)) || (xp >100)) ){
             level +=1;
             SetVidaMax(GetVidaMax() + level);
             SetFuerza(GetFuerza() + level);
@@ -62,7 +68,8 @@ public class Druida extends Jugador {
             SetVida(GetVidaMax());
             SetEnergia(GetEnergiaMax());
             SetMana(GetManaMax());
-        } else if ((level == 4)&&((200>xp)&&(xp>=100))){
+        } 
+        if ((level == 4)&&(((200>xp)&&(xp>=100))|| (xp >200) ) ){
             level +=1;
             SetVidaMax(GetVidaMax() + level);
             SetFuerza(GetFuerza() + level);
@@ -73,7 +80,8 @@ public class Druida extends Jugador {
             SetVida(GetVidaMax());
             SetEnergia(GetEnergiaMax());
             SetMana(GetManaMax());
-        } else if ((level == 5)&&((350>xp)&&(xp>=200))){
+        } 
+        if ((level == 5)&&(((350>xp)&&(xp>=200)) || (xp >350))){
             level +=1;
             SetVidaMax(GetVidaMax() + level);
             SetFuerza(GetFuerza() + level);
@@ -84,7 +92,8 @@ public class Druida extends Jugador {
             SetVida(GetVidaMax());
             SetEnergia(GetEnergiaMax());
             SetMana(GetManaMax());
-        } else if ((level == 6)&&((600>xp)&&(xp>=350))){
+        } 
+        if ((level == 6)&&(((600>xp)&&(xp>=350)) || (xp >600))){
             level +=1;
             SetVidaMax(GetVidaMax() + level);
             SetFuerza(GetFuerza() + level);
@@ -95,7 +104,8 @@ public class Druida extends Jugador {
             SetVida(GetVidaMax());
             SetEnergia(GetEnergiaMax());
             SetMana(GetManaMax());
-        } else if ((level == 7)&&((900>xp)&&(xp>=600))){
+        } 
+        if ((level == 7)&&(((900>xp)&&(xp>=600)) || (xp >900))){
             level +=1;
             SetVidaMax(GetVidaMax() + level);
             SetFuerza(GetFuerza() + level);
@@ -121,5 +131,6 @@ public class Druida extends Jugador {
         SetVidaMax(5);
         SetEnergiaMax(5);
         SetManaMax(5);
+        InitMisiones();
     }
 }
