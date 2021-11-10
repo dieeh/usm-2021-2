@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "INF253.tarea3.Main",
+      "projectName": "2021-2_1217b993"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
