@@ -6,7 +6,7 @@ public class Monstruo implements Enemigo {
     private int vida;
     private int dano;
     public void combate(Jugador jugador){
-        System.out.println("¡Te haz topado con un monstruo!");
+        System.out.println("¡Te has topado con un monstruo!");
         while ((jugador.GetVida() != 0)||(vida != 0)) {
             Scanner input = new Scanner(System.in);
             System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el monstruo!");
@@ -16,21 +16,21 @@ public class Monstruo implements Enemigo {
             int dmg = 0;
             if (eleccion == 1) {
                 dmg = jugador.ataque();
-                System.out.println("¡Haz realizado un ataque!");
+                System.out.println("¡Has realizado un ataque!");
             } else if (eleccion == 2){
                 dmg = jugador.hechizo();
-                System.out.println("¡Haz lanzado un hechizo!");
+                System.out.println("¡Has lanzado un hechizo!");
             }
             vida = vida - dmg;
-            System.out.println("¡Le haz realizado " + Integer.toString(dmg) + " puntos de daño al monstruo!");
+            System.out.println("¡Le has realizado " + Integer.toString(dmg) + " puntos de daño al monstruo!");
             System.out.println("Ahora atacará el monstruo...");
             jugador.SetVida(jugador.GetVida() - dano);
             System.out.println("¡El monstruo ha realizado "+ Integer.toString(dano) +" puntos de daño!");
         }
         if (jugador.GetVida() <= 0) {
-            System.out.println("Haz sido derrotado por el monstruo...");
+            System.out.println("Has sido derrotado por el monstruo...");
         } else if (vida <= 0){
-            System.out.println("¡Haz ganado esta batalla!");
+            System.out.println("¡Has ganado esta batalla!");
         }
     }
 

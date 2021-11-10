@@ -391,7 +391,10 @@ public class Main{
         int casilla_jugador = input.nextInt();
         System.out.println("<===== Fin del menú del DM =====>");
 
-        System.out.println("<===== Menú del Jugador =====>");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
         System.out.println("???: ¡Bienvenido a The Legend of Morio!");
         System.out.println("???: Antes de continuar, ¡dime tu nombre!");
         String nombre_jugador = input.next();
@@ -403,6 +406,7 @@ public class Main{
         System.out.println("    2: Mi mamá decia que tengo cara de hechizero...");
         System.out.println("    3: No sé, en la escuela me iba bien en tanto en esgrima como en magia...");
         int eleccion = input.nextInt();
+        Jugador player;
         if (eleccion == 1){
             System.out.println("???: ¿Enserio?, ¡entonces creo que lo mejor será que seas un guerrero!");
             System.out.println("???: Bueno, ¡para eso necesitarás una espada!");
@@ -411,7 +415,7 @@ public class Main{
             System.out.println("???: ¡Ah! No no no, no quiero ver a cualquiera sea esa cosa que hizo ese ruido, ¡adiós "+nombre_jugador+"!");
             System.out.println("    *El misterioso individuo se marcha*");
             System.out.println(nombre_jugador+": Bueno, creo que debo marcharme antes de que aparezca ese monstruo!");
-            Jugador player = new Guerrero(nombre_jugador);
+            player = new Guerrero(nombre_jugador);
         } else if (eleccion == 2){
             System.out.println("???: ¿De verdad?, ¡entonces creo que lo mejor será que seas un mago!");
             System.out.println("???: Bueno, ¡para eso necesitarás una varita y una gorra de hechizero!");
@@ -420,7 +424,7 @@ public class Main{
             System.out.println("???: ¡Ah! No no no, no quiero ver a cualquiera sea esa cosa que hizo ese ruido, ¡adiós "+nombre_jugador+"!");
             System.out.println("    *El misterioso individuo se marcha*");
             System.out.println(nombre_jugador+": Bueno, creo que debo marcharme antes de que aparezca ese monstruo!");
-            Jugador player = new Mago(nombre_jugador);
+            player = new Mago(nombre_jugador);
         } else if (eleccion == 3){
             System.out.println("???: ¿Enserio?, ¡entonces creo que lo mejor será que seas un druida!");
             System.out.println("???: Bueno, para eso necesitarás... ¿Qué es lo que usan los druidas?");
@@ -429,8 +433,78 @@ public class Main{
             System.out.println("???: ¡Ah! No no no, no quiero ver a cualquiera sea esa cosa que hizo ese ruido, ¡adiós "+nombre_jugador+"!");
             System.out.println("    *El misterioso individuo se marcha*");
             System.out.println(nombre_jugador+": Bueno, creo que debo marcharme antes de que aparezca ese monstruo!");
-            Jugador player = new Druida(nombre_jugador);
+            player = new Druida(nombre_jugador);
+        } else{
+            System.out.println("???: ¿Enserio? ¿No tienes idea?");
+            System.out.println("???: Bueno, entonces podrias ser un druida...");
+            System.out.println("???: Y para eso necesitarás... ¿Qué es lo que usan los druidas?");
+            System.out.println("???: Ni idea... bueno, toma esta cuchilla y este bastón, seguro sabrás arreglartelas");
+            System.out.println("    *Se escuchan nuevamente unos gruñidos, pero esta vez más cerca que antes*");
+            System.out.println("???: ¡Ah! No no no, no quiero ver a cualquiera sea esa cosa que hizo ese ruido, ¡adiós "+nombre_jugador+"!");
+            System.out.println("    *El misterioso individuo se marcha*");
+            System.out.println(nombre_jugador+": Bueno, creo que debo marcharme antes de que aparezca ese monstruo!");
+            player = new Druida(nombre_jugador);
         }
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        while (player.GetVida() > 0){
+            System.out.println("<===== Menú del Jugador =====>");
+            System.out.println("¿Qué deseas hacer?");
+            System.out.println("    1. Moverte a la siguiente casilla (Derecha)");
+            System.out.println("    2. Moverte a la casilla anterior (Izquierda)");
+            System.out.println("    3. Ver estadisticas");
+            System.out.println("");
+            int sig = input.nextInt();
+            if (sig == 1) {
+                casilla_jugador +=1;
+                if (casilla_jugador >= tamano){
+                    casilla_jugador = 0;
+                }
+                if (mundo[casilla_jugador].accion(player) == false){
+                    if (player.GetVida() <= 0) {
+                        System.out.println("¡¡¡Oh no!!! ¡¡¡Has muerto!!!");
+                        System.out.println("¡Se ha terminado el juego!");
+                        System.exit(0);
+                    } else if (player.GetEnergia() <= 0){
+                        casilla_jugador -=1;
+                        if (casilla_jugador <= 0){
+                            casilla_jugador = tamano - 1;
+                        }
+                    }
 
+                }
+                //mundo[casilla_jugador].accion(player);
+            } else if (sig == 2){
+                casilla_jugador -=1;
+                if (casilla_jugador <= 0){
+                    casilla_jugador = tamano - 1;
+                }
+                if (mundo[casilla_jugador].accion(player) == false){
+                    if (player.GetVida() <= 0) {
+                        System.out.println("¡¡¡Oh no!!! ¡¡¡Has muerto!!!");
+                        System.out.println("¡Se ha terminado el juego!");
+                        System.exit(0);
+                    } else if (player.GetEnergia() <= 0){
+                        casilla_jugador -=1;
+                        if (casilla_jugador <= 0){
+                            casilla_jugador = tamano - 1;
+                        }
+                    }
+
+                }
+                //mundo[casilla_jugador].accion(player);
+            } else if (sig == 3){
+                System.out.println("<===== Estadisticas del Jugador: "+nombre_jugador+" =====>");
+                System.out.println("Vida del jugador: "+ Integer.toString(player.GetVida())+"/"+Integer.toString(player.GetVidaMax()));
+                System.out.println("XP del jugador: "+ Integer.toString(player.GetXP()));
+                System.out.println("Fuerza del jugador: "+ Integer.toString(player.GetFuerza()));
+                System.out.println("Inteligencia del jugador: "+ Integer.toString(player.GetInteligencia()));
+                System.out.println("Energía del jugador: "+ Integer.toString(player.GetEnergia())+"/"+Integer.toString(player.GetEnergiaMax()));
+                System.out.println("Maná del jugador: "+ Integer.toString(player.GetMana())+"/"+Integer.toString(player.GetManaMax()));
+                System.out.println("<=====< >=====>");
+            }
+        }
     }
 }   

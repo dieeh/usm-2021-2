@@ -2,7 +2,7 @@ package INF253.tarea3;
 
 public class Bosque extends Tierra {
     public boolean accion(Jugador jugador){
-        if (jugador.GetMana() == 0) {
+        if (jugador.GetMana() < 3) {
             System.out.println("¡No tienes maná suficiente para llegar al bosque!");
             return false;
         }
@@ -22,13 +22,10 @@ public class Bosque extends Tierra {
                     System.out.println("¡Ha aparecido un monstruo!");
                     GetMonstruo().combate(jugador);
                 } else if (GetJefe() != null){
-                    System.out.println("¡Te haz encontrado al Jefe Final!");
+                    System.out.println("¡Te has encontrado al Jefe Final!");
                     GetJefe().combate(jugador);
                 }
             }
-        } else {
-            System.out.println("¡No tienes energía suficiente para llegar al bosque!");
-            return false;
         }
         return true;
     }

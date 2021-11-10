@@ -3,7 +3,7 @@ package INF253.tarea3;
 public class Montana extends Tierra{
     
     public boolean accion(Jugador jugador){
-        if (jugador.GetEnergia() == 0){
+        if (jugador.GetEnergia() < 3){
             System.out.println("¡No tienes energía suficiente para llegar a las montañas!");
             return false;
         }
@@ -23,13 +23,10 @@ public class Montana extends Tierra{
                     System.out.println("¡Ha aparecido un monstruo!");
                     GetMonstruo().combate(jugador);
                 } else if (GetJefe() != null){
-                    System.out.println("¡Te haz encontrado al Jefe Final!");
+                    System.out.println("¡Te has encontrado al Jefe Final!");
                     GetJefe().combate(jugador);
                 }
             }
-        } else {
-            System.out.println("¡No tienes energía suficiente para llegar a las montañas!");
-            return false;
         }
         return true;
     }

@@ -1,5 +1,6 @@
 package INF253.tarea3;
 
+
 public class Mision {
     private char requisito;
     private int valor;
@@ -13,10 +14,10 @@ public class Mision {
         }
     }
 
-    public Mision(char x, int y, int z, int w){
-        this.requisito = x;
-        this.valor = y;
-        this.cantidad = z;
-        this.recompensa = w;
+    public Mision(char requisito, int valor, int cantidad, int recompensa){
+        this.requisito = requisito;
+        this.valor = valor;
+        this.cantidad = cantidad;
+        this.recompensa = recompensa;
     }
 }

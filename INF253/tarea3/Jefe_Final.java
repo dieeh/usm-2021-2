@@ -9,7 +9,7 @@ public class Jefe_Final implements Enemigo {
     private int dano_base;
     private int fase;
     public void combate(Jugador jugador){
-        System.out.println("¡¡Te haz topado con el Jefe Final!!");
+        System.out.println("¡¡Te has topado con el Jefe Final!!");
         System.out.println("¡Este Jefe Final se llama " + nombre + "!");
         while ((jugador.GetVida()!= 0)||(vida != 0)){
             Scanner input = new Scanner(System.in);
@@ -20,13 +20,13 @@ public class Jefe_Final implements Enemigo {
             int dmg = 0;
             if (eleccion == 1) {
                 dmg = jugador.ataque();
-                System.out.println("¡Haz realizado un ataque!");
+                System.out.println("¡Has realizado un ataque!");
             } else if (eleccion == 2){
                 dmg = jugador.hechizo();
-                System.out.println("¡Haz lanzado un hechizo!");
+                System.out.println("¡Has lanzado un hechizo!");
             }
             vida = vida - dmg;
-            System.out.println("¡Le haz realizado " + Integer.toString(dmg) + " puntos de daño al Jefe Final!");
+            System.out.println("¡Le has realizado " + Integer.toString(dmg) + " puntos de daño al Jefe Final!");
             System.out.println("Ahora atacará el Jefe Final...");
             if (vida <= vida_i/2){
                 fase = 1;
@@ -35,9 +35,9 @@ public class Jefe_Final implements Enemigo {
             System.out.println("¡El Jefe Final te ha provocado "+ Integer.toString(dano_base + 2*fase) +" puntos de daño!");
         }
         if (jugador.GetVida() <= 0) {
-            System.out.println("Haz perdido...");
+            System.out.println("Has perdido...");
         } else if (vida <= 0){
-            System.out.println("¡Haz vencido al Jefe Final!");
+            System.out.println("¡Has vencido al Jefe Final!");
         }
     }
 
