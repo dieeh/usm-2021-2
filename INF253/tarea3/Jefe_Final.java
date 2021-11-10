@@ -35,9 +35,12 @@ public class Jefe_Final implements Enemigo {
             System.out.println("¡El Jefe Final te ha provocado "+ Integer.toString(dano_base + 2*fase) +" puntos de daño!");
         }
         if (jugador.GetVida() <= 0) {
-            System.out.println("Has perdido...");
+            //System.out.println("Has perdido...");
         } else if (vida <= 0){
             System.out.println("¡Has vencido al Jefe Final!");
+            System.out.println("Has salvado el mundo, felicidades.");
+            System.out.println("<===== Fin del juego =====>");
+            System.exit(0);
         }
     }
 

@@ -5,14 +5,14 @@ public class Bueno extends NPC {
     private int cantidad;
     public void interaccion(Jugador jugador){
         System.out.println(GetNombre() +": Creo que necesitas un poco de ayuda, ¡te subiré "+Integer.toString(cantidad)+" puntos a tu "+atributo+"!");
-        if (atributo == "vida") {
+        if (atributo.equals("vida") == true) {
             jugador.SetVida(jugador.GetVida() + cantidad);
-        } else if (atributo == "xp"){
+        } else if (atributo.equals("xp") == true){
             jugador.SetXP(jugador.GetXP() + cantidad);
             jugador.subir_experiencia(jugador.GetXP());
-        } else if (atributo == "energia"){
+        } else if (atributo.equals("energia") == true){
             jugador.SetEnergia(jugador.GetEnergia() + cantidad);
-        } else if (atributo == "mana"){
+        } else if (atributo.equals("mana") == true){
             jugador.SetMana(jugador.GetMana() + cantidad);
         }
 

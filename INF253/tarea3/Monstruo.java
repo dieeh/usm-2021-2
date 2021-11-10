@@ -21,16 +21,20 @@ public class Monstruo implements Enemigo {
                 dmg = jugador.hechizo();
                 System.out.println("¡Has lanzado un hechizo!");
             }
-            vida = vida - dmg;
+            
             System.out.println("¡Le has realizado " + Integer.toString(dmg) + " puntos de daño al monstruo!");
+            if (vida <= 0) {
+                vida = 0;
+                System.out.println("¡Has ganado esta batalla!");
+                break;
+            }
             System.out.println("Ahora atacará el monstruo...");
             jugador.SetVida(jugador.GetVida() - dano);
             System.out.println("¡El monstruo ha realizado "+ Integer.toString(dano) +" puntos de daño!");
-        }
-        if (jugador.GetVida() <= 0) {
-            System.out.println("Has sido derrotado por el monstruo...");
-        } else if (vida <= 0){
-            System.out.println("¡Has ganado esta batalla!");
+            if (jugador.GetVida() <= 0) {
+                //System.out.println("Has sido derrotado por el monstruo...");
+                jugador.SetVida(0);
+            }
         }
     }
 

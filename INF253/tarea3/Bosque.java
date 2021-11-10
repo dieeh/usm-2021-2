@@ -19,10 +19,10 @@ public class Bosque extends Tierra {
             SetPosi((float) ((Math.random() * (1.0 - 0.0)) + 0.0));
             if(GetPosi() > 0.5){
                 if (GetMonstruo() != null) {
-                    System.out.println("¡Ha aparecido un monstruo!");
+                    //System.out.println("¡Ha aparecido un monstruo!");
                     GetMonstruo().combate(jugador);
                 } else if (GetJefe() != null){
-                    System.out.println("¡Te has encontrado al Jefe Final!");
+                    //System.out.println("¡Te has encontrado al Jefe Final!");
                     GetJefe().combate(jugador);
                 }
             }

@@ -20,4 +20,8 @@ public class Mision {
         this.cantidad = cantidad;
         this.recompensa = recompensa;
     }
+
+    public int GetRecompensa(){
+        return recompensa;
+    }
 }
