@@ -26,6 +26,17 @@ public class Monstruo implements Enemigo {
             if (vida <= 0) {
                 vida = 0;
                 System.out.println("¡Has ganado esta batalla!");
+                for (int i = 0; i < jugador.GetMisiones().size()  ; i++) {
+                    if (jugador.GetMisiones().get(i).GetRequi() == 'm' ){
+                        jugador.GetMisiones().get(i).SetCantidad(jugador.GetMisiones().get(i).GetCantidad() + 1);
+                        boolean requi = jugador.GetMisiones().get(i).verificar_requisito();
+                        if (requi == true){
+                            jugador.SetXP(jugador.GetXP() + jugador.GetMisiones().get(i).GetRecompensa());
+                            jugador.GetMisiones().remove(i);
+                            i = 0;
+                        }
+                    }
+                }
                 break;
             }
             System.out.println("Ahora atacará el monstruo...");

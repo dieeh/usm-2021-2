@@ -5,11 +5,11 @@ import java.util.Random;
 public class Montana extends Tierra{
     
     public boolean accion(Jugador jugador){
-        if (jugador.GetEnergia() < 3){
+        if (jugador.GetEnergia() <= 0){
             System.out.println("¡No tienes energía suficiente para llegar a las montañas!");
             return false;
         }
-        if (jugador.GetEnergia() > 3){
+        if (jugador.GetEnergia() > 0){
             int cobro = jugador.GetEnergia() - 3;
             if (cobro < 0){
                 jugador.SetVida(jugador.GetVida() + cobro);

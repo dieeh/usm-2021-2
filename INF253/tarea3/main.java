@@ -532,6 +532,17 @@ public class Main{
                 System.out.println("<=====================>");
                 System.out.println("");
             }
+            for (int i = 0; i < player.GetMisiones().size()  ; i++) {
+                if (player.GetMisiones().get(i).GetRequi() == 'v' ){
+                    player.GetMisiones().get(i).SetCantidad(casilla_jugador);
+                    boolean requi = player.GetMisiones().get(i).verificar_requisito();
+                    if (requi == true){
+                        player.SetXP(player.GetXP() + player.GetMisiones().get(i).GetRecompensa());
+                        player.GetMisiones().remove(i);
+                        i = 0;
+                    }
+                }
+            }
         }
     }
 }   

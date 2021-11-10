@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Bosque extends Tierra {
     public boolean accion(Jugador jugador){
-        if (jugador.GetMana() < 3) {
+        if (jugador.GetMana() <= 0) {
             System.out.println("¡No tienes maná suficiente para llegar al bosque!");
             return false;
         }
-        if (jugador.GetMana() > 3) {
+        if (jugador.GetMana() > 0) {
             int cobro = jugador.GetMana() - 3;
             if (cobro < 0){
                 jugador.SetVida(jugador.GetVida() + cobro);
