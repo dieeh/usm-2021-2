@@ -7,7 +7,7 @@ public class Monstruo implements Enemigo {
     private int dano;
     public void combate(Jugador jugador){
         System.out.println("¡Te has topado con un monstruo!");
-        while ((jugador.GetVida() != 0)&&(vida != 0)) {
+        while ((jugador.GetVida() > 0)&&(vida > 0)) {
             Scanner input = new Scanner(System.in);
             System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el monstruo!");
             System.out.println("1: Ataque");

@@ -11,7 +11,7 @@ public class Jefe_Final implements Enemigo {
     public void combate(Jugador jugador){
         System.out.println("¡¡Te has topado con el Jefe Final!!");
         System.out.println("¡Este Jefe Final se llama " + nombre + "!");
-        while ((jugador.GetVida()!= 0)&&(vida != 0)){
+        while ((jugador.GetVida()> 0)&&(vida > 0)){
             Scanner input = new Scanner(System.in);
             System.out.println("¡Jugador, elige hacer un ataque o un hechizo contra el Jefe Final!");
             System.out.println("1: Ataque");
@@ -27,21 +27,32 @@ public class Jefe_Final implements Enemigo {
             }
             vida = vida - dmg;
             System.out.println("¡Le has realizado " + Integer.toString(dmg) + " puntos de daño al Jefe Final!");
+            if (vida <= 0) {
+                vida = 0;
+                System.out.println("¡Has vencido al Jefe Final "+nombre+"!");
+                System.out.println("Has salvado el mundo, felicidades.");
+                System.out.println("<===== Fin del juego =====>");
+                System.exit(0);
+            }
             System.out.println("Ahora atacará el Jefe Final...");
             if (vida <= vida_i/2){
                 fase = 1;
             }
             jugador.SetVida(jugador.GetVida() - (dano_base + 2*fase));
             System.out.println("¡El Jefe Final te ha provocado "+ Integer.toString(dano_base + 2*fase) +" puntos de daño!");
+            if (jugador.GetVida() <= 0) {
+                //System.out.println("Has sido derrotado por el monstruo...");
+                jugador.SetVida(0);
+            }
         }
-        if (jugador.GetVida() <= 0) {
-            //System.out.println("Has perdido...");
-        } else if (vida <= 0){
-            System.out.println("¡Has vencido al Jefe Final!");
-            System.out.println("Has salvado el mundo, felicidades.");
-            System.out.println("<===== Fin del juego =====>");
-            System.exit(0);
-        }
+        //if (jugador.GetVida() <= 0) {
+        //    //System.out.println("Has perdido...");
+        //} else if (vida <= 0){
+        //    System.out.println("¡Has vencido al Jefe Final!");
+        //    System.out.println("Has salvado el mundo, felicidades.");
+        //    System.out.println("<===== Fin del juego =====>");
+        //    System.exit(0);
+        //}
     }
 
     public Jefe_Final(String x){
