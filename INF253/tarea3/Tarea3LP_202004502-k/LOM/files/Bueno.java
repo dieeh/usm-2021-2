@@ -1,4 +1,7 @@
-package INF253.tarea3;
+//package INF253.tarea3;
+package LOM.files;
+
+
 
 public class Bueno extends NPC {
     private String atributo;

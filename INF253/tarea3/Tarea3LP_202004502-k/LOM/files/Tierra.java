@@ -1,4 +1,5 @@
-package INF253.tarea3;
+package LOM.files;
+//package INF253.tarea3;
 
 public abstract class Tierra {
     private float probabilidad_enemigo;

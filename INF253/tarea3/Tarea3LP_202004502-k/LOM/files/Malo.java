@@ -1,6 +1,9 @@
-package INF253.tarea3;
+//package INF253.tarea3;
+package LOM.files;
 
 import java.util.Random;
+
+
 
 public class Malo extends NPC {
     private int cantidad_energia;

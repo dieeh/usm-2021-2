@@ -1,6 +1,8 @@
-package INF253.tarea3;
-
+//package INF253.tarea3;
+package LOM.files;
 import java.util.Random;
+
+
 
 public class Montana extends Tierra{
     

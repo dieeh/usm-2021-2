@@ -1,6 +1,9 @@
-package INF253.tarea3;
+//package INF253.tarea3;
+package LOM.files;
 
 import java.util.Scanner;
+
+
 
 public class Jefe_Final implements Enemigo {
     private String nombre;

@@ -1,4 +1,0 @@
--jugador.level
--jugador.vida_max
--jugador.energia_max
--jugador.mana_max

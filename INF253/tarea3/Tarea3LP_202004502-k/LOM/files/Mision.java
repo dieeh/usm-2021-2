@@ -1,5 +1,5 @@
-package INF253.tarea3;
-
+//package INF253.tarea3;
+package LOM.files;
 
 public class Mision {
     private char requisito;
