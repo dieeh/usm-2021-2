@@ -6,6 +6,19 @@ package INF253.tarea3;
 public class Mago extends Jugador {
     private int level = 1;
     //private List<Mision> lista_misiones = new ArrayList<Mision>();
+
+    /**
+     * int ataque()
+     * 
+     * Esta funcion calcula el daño del ataque a realizar por
+     * el jugador en base a sus stats.
+     * 
+     * Input:
+     *  Ninguno.
+     * 
+     * Output:
+     *  int: Retorna la cantidad de daño
+     */
     public int ataque(){
         if (GetEnergia() <= 0) {
             System.out.println("<< ¡No te queda energía! >>");
@@ -17,6 +30,20 @@ public class Mago extends Jugador {
         SetEnergia(GetEnergia() - 3);
         return retorno;
     }
+
+
+    /**
+     * int hechizo()
+     * 
+     * Esta funcion calcula el daño del hechizo a lanzar por
+     * el jugador en base a sus stats.
+     * 
+     * Input:
+     *  Ninguno.
+     * 
+     * Output:
+     *  int: Retorna la cantidad de daño
+     */
     public int hechizo(){
         if (GetMana() <= 0) {
             System.out.println("<< ¡No te queda maná! >>");
@@ -28,6 +55,19 @@ public class Mago extends Jugador {
         SetMana(GetMana() - 5);
         return retorno2;
     }
+
+    /**
+     * void subir_experiencia()
+     * 
+     * Este metodo revisa si con la experiencia actual el jugador
+     * sube o no de nivel.
+     * 
+     * Input:
+     *  int xp: los puntos de experiencia del jugador.
+     * 
+     * Output:
+     *  Ninguno.
+     */
     public void subir_experiencia(int xp){
         if ((level == 1)&&(((25>xp)&&(xp>=10) )|| (xp >25) )) {
             level +=1;
@@ -115,6 +155,16 @@ public class Mago extends Jugador {
         }
     }
 
+
+    /**
+     * Mago()
+     * 
+     * Este es el constructor de una de las subclases de jugador.
+     * 
+     * Input:
+     *  String x: Nombre del jugador.
+     * 
+     */
     public Mago(String x){
         SetNombre(x);
         SetVida(10);

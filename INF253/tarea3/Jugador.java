@@ -20,34 +20,49 @@ public abstract class Jugador {
     public abstract int hechizo();
     public abstract void subir_experiencia(int xp);
 
+
+    /**
+     * Funciones Get y Set
+     * 
+     * Estas funciones retornan y asignan respectivamente las siguientes variables
+     * de la clase abstracta
+     * 
+     * -nombre
+     * -vida
+     * -xp
+     * -fuerza
+     * -inteligencia
+     * -energia
+     * -mana
+     * -vida_max
+     * -energia_max
+     * -mana_max
+     * 
+     */
     public String GetNombre(){
         return nombre;
     }
     public void SetNombre(String x){
         nombre = x;
     }
-
     public int GetVida(){
         return vida;
     }
     public void SetVida(int x){
         vida = x;
     }
-
     public int GetXP(){
         return xp;
     }
     public void SetXP(int x){
         xp = x;
     }
-
     public int GetFuerza(){
         return fuerza;
     }
     public void SetFuerza(int x){
         fuerza = x;
     }
-
     public int GetInteligencia(){
         return inteligencia;
     }
@@ -84,12 +99,50 @@ public abstract class Jugador {
     public void SetManaMax(int x){
         mana_max = x;
     }
+
+
+    /**
+     * void InitMisiones()
+     * 
+     * Este metodo inicializa la lista de misiones
+     * 
+     * Input:
+     *  Ninguno.
+     * 
+     * Output:
+     *  Ninguno
+     */
     public void InitMisiones(){
         lista_misiones = new ArrayList<Mision>();
     }
+
+    /**
+     * List<Mision> GetMisiones()
+     * 
+     * Este metodo retorna la lista de misiones del jugador.
+     * 
+     * Input:
+     *  Ninguno.
+     * 
+     * Output:
+     *  List<Mision>: Es la lista de misiones del jugador.
+     */
     public List<Mision> GetMisiones(){
         return lista_misiones;
     }
+
+    /**
+     * void AddMisiones()
+     * 
+     * Este metodo agrega misiones a la lista de misiones del jugador.
+     * 
+     * Input:
+     *  Mision mision: Mision a agregar a la lista.
+     * 
+     * Output:
+     *  Ninguno.
+     * 
+     */
     public void AddMisiones(Mision mision){
         lista_misiones.add(mision);
     }

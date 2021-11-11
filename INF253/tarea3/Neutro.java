@@ -7,6 +7,20 @@ public class Neutro extends NPC {
     private int valor;
     private int recompensa;
     private int ya_dio_mision;
+
+    /**
+     * void interaccion()
+     * 
+     * Esta funcion representa la interaccion entre el jugador y el NPC
+     * de la casilla, en este caso este npc ofrece una mision.
+     * 
+     * Input:
+     *  Jugador jugador: Este parametro es el personaje creado en la
+     *                   ejecucion del programa.
+     * 
+     * Output:
+     *  Ninguno.
+     */
     public void interaccion(Jugador jugador){
         if (ya_dio_mision == 0) {
             Scanner input = new Scanner(System.in);
@@ -35,6 +49,20 @@ public class Neutro extends NPC {
         }
     }
 
+
+    /**
+     * Neutro()
+     * 
+     * Este es el constructor de una de las subclases de NPC,
+     * que recibe más parametros que las otras debido a que necesita
+     * tener los datos para crear una mision.
+     * 
+     * Input:
+     *  String nombre: Nombre del npc.
+     *  char requisito: requisito de la mision, v para viajar y m para matar monstruos.
+     *  int valor: la coordenada de la casilla a viajar o la cantidad de monstruos.
+     *  int recompensa: la cantidad de xp que será recompensada al completar la mision.
+     */
     public Neutro(String nombre, char requisito, int valor, int recompensa){
         SetNombre(nombre);
         this.requisito = requisito;

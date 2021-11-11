@@ -5,6 +5,18 @@ import java.util.Scanner;
 public class Monstruo implements Enemigo {
     private int vida;
     private int dano;
+
+    /**
+     * void combate()
+     * 
+     * Este metodo representa el combate entre el monstruo y el jugador
+     * 
+     * Input:
+     *  Jugador jugador: Es el personaje creado en la ejecucion del programa.
+     * 
+     * Output:
+     *  Ninguno.
+     */
     public void combate(Jugador jugador){
         System.out.println("¡Te has topado con un monstruo!");
         while ((jugador.GetVida() > 0)&&(vida > 0)) {
@@ -49,11 +61,31 @@ public class Monstruo implements Enemigo {
         }
     }
 
+
+    /**
+     *  Monstruo()
+     * 
+     * Este es el constructor de la clase Monstruo, y recibe
+     * 2 parametros que corresponden a los atributos de este.
+     * 
+     * Input:
+     *  int x: Vida del monstruo.
+     *  int y: Daño del monstruo.
+     * 
+     */
     public Monstruo(int x, int y){
         this.vida = x;
         this.dano = y;
     }
 
+
+    /**
+     *  Monstruo()
+     * 
+     * Este es el segundo constructor de la clase Monstruo, y no
+     * recibe parametros, asigna valores por defecto.
+     * 
+     */
     public Monstruo(){
         this.vida = 15;
         this.dano = 5;

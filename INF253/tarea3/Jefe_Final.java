@@ -8,6 +8,18 @@ public class Jefe_Final implements Enemigo {
     private int vida_i;
     private int dano_base;
     private int fase;
+
+    /**
+     * void combate()
+     * 
+     * Este metodo representa el combate entre el Jefe final y el jugador
+     * 
+     * Input:
+     *  Jugador jugador: Es el personaje creado en la ejecucion del programa.
+     * 
+     * Output:
+     *  Ninguno.
+     */
     public void combate(Jugador jugador){
         System.out.println("¡¡Te has topado con el Jefe Final!!");
         System.out.println("¡Este Jefe Final se llama " + nombre + "!");
@@ -32,6 +44,7 @@ public class Jefe_Final implements Enemigo {
                 System.out.println("¡Has vencido al Jefe Final "+nombre+"!");
                 System.out.println("Has salvado el mundo, felicidades.");
                 System.out.println("<===== Fin del juego =====>");
+                input.close();
                 System.exit(0);
             }
             System.out.println("Ahora atacará el Jefe Final...");
@@ -55,6 +68,18 @@ public class Jefe_Final implements Enemigo {
         //}
     }
 
+
+    /**
+     *  Jefe_Final()
+     * 
+     * Este es el segundo constructor de la clase Jefe_Final, y recibe
+     * como parametro solo el nombre del Jefe, y el resto de los atributos
+     * son definidos por defecto.
+     * 
+     * Input:
+     *  String x: Nombre del jefe
+     * 
+     */
     public Jefe_Final(String x){
         this.nombre = x;
         this.vida = 50;
@@ -63,6 +88,18 @@ public class Jefe_Final implements Enemigo {
         this.fase = 2;
     }
 
+    /**
+     *  Jefe_Final()
+     * 
+     * Este es el constructor de la clase Jefe_Final, y recibe
+     * como parametro el nombre del Jefe, la vida y el daño base
+     * 
+     * Input:
+     *  String x: Nombre del jefe
+     *  int y: Vida del jefe
+     *  int z: Daño base del jefe.
+     * 
+     */
     public Jefe_Final(String x, int y, int z){
         this.nombre = x;
         this.vida = y;

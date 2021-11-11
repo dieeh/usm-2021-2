@@ -510,6 +510,7 @@ public class Main{
                     if (player.GetVida() <= 0) {
                         System.out.println("¡¡¡Oh no!!! ¡¡¡Has muerto!!!");
                         System.out.println("¡Se ha terminado el juego!");
+                        input.close();
                         System.exit(0);
                     } else if (player.GetEnergia() <= 0){
                         casilla_jugador -=1;
@@ -544,5 +545,6 @@ public class Main{
                 }
             }
         }
+
     }
 }   
