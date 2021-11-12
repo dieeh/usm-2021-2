@@ -1,6 +1,6 @@
 
 DALE: 
-	javac LOM/files/Main.java
+	javac -Xlint:all LOM/files/Main.java
 run:
 	java LOM.files.Main
 

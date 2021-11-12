@@ -34,6 +34,7 @@ public class Monstruo implements Enemigo {
                 System.out.println("¡Has lanzado un hechizo!");
             }
             
+            vida = vida - dmg;
             System.out.println("¡Le has realizado " + Integer.toString(dmg) + " puntos de daño al monstruo!");
             if (vida <= 0) {
                 vida = 0;

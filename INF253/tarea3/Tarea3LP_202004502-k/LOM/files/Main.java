@@ -540,6 +540,7 @@ public class Main{
                     boolean requi = player.GetMisiones().get(i).verificar_requisito();
                     if (requi == true){
                         player.SetXP(player.GetXP() + player.GetMisiones().get(i).GetRecompensa());
+                        player.subir_experiencia(player.GetXP());
                         player.GetMisiones().remove(i);
                         i = 0;
                     }
