@@ -63,7 +63,7 @@ Rol:
 %%%%%%%%%%%%%%%%%%%%%%%% !!!! LEER !!!!  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % NO borre los caracteres ampersand &, entre ellos ponga cada dígito de su rol:%
 %EJEMPLO: 2 & 0 & 2 & 0 & 7 & 3 & 5 & 0 & 0 & 0
-2 & 0 & 2 & 0 & 0 & 4 & 5 & 0 & 2 & K &\\\hline
+2 & 0 & 2 & 0 & 0 & 4 & 5 & 0 & 2 & - & K\\\hline
 \end{tabular}
 \end{minipage}
 
@@ -127,6 +127,39 @@ Rol:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Solución:}
 %Escriba su respuesta aquí
+\begin{center}
+    \begin{minipage}{0.9\textwidth}
+    \centering
+        \begin{tikzpicture}[scale=1,transform shape,node distance=1.7cm,main node/.style={circle,draw}]
+                        \node[main node] (1)  {$O$};
+                        \node[main node] (2) [above of=1] {$P$};
+                        \node[main node] (3) [above right of=2]  {$Q$};
+                        \node[main node] (4) [right of=3]  {$R$};
+                        \node[main node] (5) [below right of=1] {$X$};
+                        \node[main node] (6) [right of=5] {$W$};
+                        \node[main node] (7) [right of=6] {$V$};
+                        \node[main node] (8) [above right of=7] {$U$};
+                        \node[main node] (9) [above of=8] {$T$};
+                        \node[main node] (10) [above left of=9] {$S$};
+
+                        %\path (1) edge [bend left,-] (2);
+                        \draw[] (1)--(2);
+                        \draw[] (2)--(3);
+                        \draw[] (3)--(4);
+                        \draw[] (1)--(6);
+                        \draw[] (5)--(1);
+                        \draw[] (5)--(4);
+                        \draw[] (6)--(10);
+                        \draw[] (9)--(10);
+                        \draw[] (8)--(9);
+                        \draw[] (7)--(6);
+                        \draw[] (8)--(7);
+                        \draw[] (5)--(8);
+                        \draw[] (3)--(7);
+        \end{tikzpicture}
+    \label{sol1}
+    \end{minipage}
+\end{center}
 
     
     \item Otro grupo de ayudantes se adelantó, y construyeron su propio grafo con conexiones. Ahora la Universidad necesita saber si ambos grafos son válidos, por lo que se les pide que demuestren o refuten que el Grafo \ref{tab:G1} y el Grafo 2 (que se muestra a continuación) son (o no) isomorfos. Argumente formalmente y escriba una conclusión. (30\%)
@@ -140,6 +173,7 @@ Rol:
     
 \textbf{Solución:}
 %Escriba su respuesta aquí
+
 \end{enumerate}
 \newpage
 \section{Búsqueda}
@@ -201,11 +235,47 @@ Rol:
         
         \textbf{Solución:}
         %Escriba su respuesta aquí
-        
+        \begin{center}
+            \begin{minipage}{0.9\textwidth}
+            \centering
+                \begin{tikzpicture}[scale=1,transform shape,node distance=2cm,main node/.style={circle,draw}]
+                        \node[main node] (1){$a_{1}$};
+                        \node[main node] [above of=1] (2){$a_{2}$};
+                        \node[main node] [right of=10] (3){$a_{3}$};
+                        \node[main node] [above left of=7] (4){$a_{4}$};
+                        \node[main node] [above right of=2] (5){$a_{5}$};
+                        \node[main node] [below right of=1] (6){$a_{6}$};
+                        \node[main node] [right of=6] (7){$a_{7}$};
+                        \node[main node] [below right of=10] (8){$a_{8}$};
+                        \node[main node] [above right of =7] (9){$a_{9}$};
+                        \node[main node] [right of=5] (10){$a_{10}$};
+
+                        \draw[] (1)--(2);
+                        \draw[] (1)--(6);
+                        \draw[] (2)--(5);
+                        \draw[] (2)--(6);
+                        \draw[] (2)--(7);
+                        \draw[] (3)--(10);
+                        \draw[] (4)--(5);
+                        \draw[] (4)--(7);
+                        \draw[] (6)--(7);
+                        \draw[] (6)--(9);
+                        \draw[] (6)--(10);
+                        \draw[] (8)--(9);
+                        \draw[] (8)--(10);
+
+
+                \end{tikzpicture}
+                \label{sol3}
+                \end{minipage}
+            \end{center}
+            
         \item[b) ]El grupo desea llegar lo más pronto posible a la atracción \textit{Sansano Rawr} desde la boletería. ¿Es más eficiente utilizar, búsqueda a lo ancho o en profundidad? Justifique, mostrando paso a paso cómo realiza cada búsqueda, y mostrando el orden en que se visitan los lugares en casa caso. (50\%)
         
         \textbf{Solución:}
         %Escriba su respuesta aquí
+        \newline
+        tuve toda la semana llena y no tuve tiempo pa hacer la tarea :(
         
     \end{itemize}
 
