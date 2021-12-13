@@ -37,17 +37,17 @@ de la comparacion
 */
 %proceso(L,V):- mediana(L,M), promedio(L,P), (P>M -> Q is 1; Q is -1), (Q>0 -> append(V,['true'],Vnew); append(V,['false'],Vnew)), V is Vnew.
 
-proceso2(L,Q):- mediana(L,M), promedio(L,P), (P>M -> Q is true; Q is false). % (Q>0 -> append(V,['true'],Vnew); append(V,['false'],Vnew)), V is Vnew.
+proceso2(L,V,Vnew):- mediana(L,M), promedio(L,P), (P>M -> Q is 1; Q is -1), (Q>0 -> append(V,['true'],Vnew); append(V,['false'],Vnew)).
 
 
 /* bondad calcula si una lista es bondadosa si el promedio es mayor que la mediana de la lista
 */
-bondad1([],[]).
+bondad([],[]).
 %bondad([H|T], V):- proceso(H,V), bondad(T,Vnew).
 
 
 bondad2([],[]).
-%bondad2(H,V):- member(X, H), proceso(X,V), fail ; true.
+bondad2(H,V,Vnew):- member(X, H), proceso2(X,V,Vnew), fail ; true.
 
 
 
