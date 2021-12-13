@@ -1,0 +1,165 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{makecell}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{arrows,petri,topaths,shapes,automata}
+\usepackage{tkz-berge}
+
+\usepackage[position=bottom]{subfig}
+
+\setlength\parindent{0pt}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,}
+}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\begin{document}
+
+\thispagestyle{empty}
+ 	
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: Margarita Bugueño, Sebastián Gallardo.}\\
+{\large Ayudantes: Valentina Aróstica, Bryan González, Sofía Mañana y Sofía Riquelme}
+
+Universidad T\'ecnica Federico Santa Mar\'{\i}a
+
+Departamento de Inform\'atica -- CSJ - CC 
+
+Diciembre 03, 2021
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+Nombre:
+
+\begin{tabular}{|c|}\hline
+%%%%%%%%%%%%%%%%%%%%%%%% !!!! LEER !!!!  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Borre los caracteres ~ y los signo peso $, para poner su nombre aquí: %
+$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$\\\hline
+\end{tabular}
+
+\vspace{0.1cm}
+
+Rol:
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\hline
+%%%%%%%%%%%%%%%%%%%%%%%% !!!! LEER !!!!  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NO borre los caracteres ampersand &, entre ellos ponga cada dígito de su rol:%
+%EJEMPLO: 2 & 0 & 2 & 0 & 7 & 3 & 5 & 0 & 0 & 0
+& & & & & & & & & &\\\hline
+\end{tabular}
+\end{minipage}
+
+\vspace{0.3cm}
+
+\begin{center}
+    \huge Tarea 3
+\end{center}
+
+
+\section{Reglas generales}
+\input{Reglas}
+
+\section{Problemas}
+\begin{enumerate}
+
+    \item Considere la siguiente red de tuberías de la empresa \textit{Aguas Sansanas\texttrademark}, descrita a continuación por sus capacidades de flujo de agua [$m^3/s$]:
+    
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        $\rightarrow$& s & 1 & 2 & 3 & 4 & 5 & 6 & t\\
+        \hline
+        s& - & 8 & 12 &  &  &  &  & \\
+        \hline
+        1&  & - &  & 7 &  &  &  & \\
+        \hline
+        2&  & 4 & - &  & 3 &  & 6 & \\
+        \hline
+        3&  &  &  & - & 5 &  &  & 8\\
+        \hline
+        4&  &  &  & 4 & - & 9 &  & \\
+        \hline
+        5&  &  &  &  &  & - &  & 12\\
+        \hline
+        6&  &  &  &  & 8 & 2 & - & \\
+
+        \hline
+
+    \end{tabular}
+    
+    \end{center}
+    
+    \begin{enumerate}
+        \item[a)] Determine \textbf{claramente} el flujo máximo adimisible por esta red, \textbf{justificando formalmente} su respuesta, \textbf{mostrando la red de flujo final.} Debe mostrar todo su procedimiento.(puede copiar y pegar, cuantas veces necesite, el código \LaTeX $~$del flujo inicial haciendo los cambios necesarios para mostrar el paso a paso). (40\%)
+        \item[b)] Demuestre que el flujo encontrado es máximo.  (30\%)
+    \end{enumerate}
+    
+    \textbf{Solución:}
+    \vspace{1cm}
+    
+    %Escriba su respuesta aquí
+    
+    \item Considerando la siguiente cartilla, encuentre el $|G|$ e identifique cuales de los movimientos son permutaciones conjugadas entre sí. Justifique su respuesta. (30 \%)
+    \\
+    \textit{Hint:} Con movimiento se refiere a todas las rotaciones o reflexiones que se pueden realizar a la figura para que estas sean parte de  $|G|$.
+    
+    
+\centering
+ \begin{tikzpicture}[auto, node distance=0.6 cm,semithick]
+\tikzstyle{every state}=[rectangle,draw,minimum size=0.6cm] 
+\node[state] (0) {$A$};
+\node[state] (7) [right of=0] {$B$};
+\node[state] (1) [below of=0] {$D$};
+\node[state] (2) [left of=1] {$C$};
+\node[state] (3) [right of=1] {$E$};
+\node[state] (4) [below of=2] {$F$};
+\node[state] (6) [right of=4] {$G$};
+
+\draw (0,0) circle (0.2cm);
+\draw (0.6,0) circle (0.2cm);
+\draw (0,-0.6) circle (-0.2cm);
+\draw (-0.6,-0.6) circle (0.2cm);
+\draw (0.6,-0.6) circle (0.2cm);
+\draw (-0.6,-1.2) circle (0.2cm);
+\draw (0,-1.2) circle (0.2cm);
+
+\end{tikzpicture}\\
+\label{cartilla}
+    
+\end{enumerate}
+
+
+\section{Descuentos}
+\input{Descuentos}
+
+\section{Entrega}
+\input{Entrega}
+
+
+\end{document}
