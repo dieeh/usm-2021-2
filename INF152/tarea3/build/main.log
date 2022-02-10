@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.28)  13 DEC 2021 19:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.28)  13 DEC 2021 23:53
 entering extended mode
 **d:/diego/Universidad/2021-2/INF152/tarea3/main.tex
 (d:/diego/Universidad/2021-2/INF152/tarea3/main.tex
@@ -762,9 +762,14 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
  (D:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (Reglas.tex) [1
+)
+Overfull \hbox (49.48343pt too wide) in paragraph at lines 70--76
+[][] 
+ []
 
-{C:/Users/diego/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (Descuentos.tex) (Entrega.tex) [2] (d:\diego\Universidad\2021-2\INF152\tarea3\build\main.aux
+(Reglas.tex) [1
+
+{C:/Users/diego/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (Descuentos.tex) (Entrega.tex [2]) [3] (d:\diego\Universidad\2021-2\INF152\tarea3\build\main.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
@@ -772,17 +777,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9DD68B464019A35F38FE1B269CE31753;385.
  ) 
 Here is how much of TeX's memory you used:
- 26061 strings out of 478927
- 494621 string characters out of 2862392
- 865357 words of memory out of 3000000
- 43442 multiletter control sequences out of 15000+600000
- 407968 words of font info for 44 fonts, out of 8000000 for 9000
+ 26065 strings out of 478927
+ 494663 string characters out of 2862392
+ 863357 words of memory out of 3000000
+ 43444 multiletter control sequences out of 15000+600000
+ 408303 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,18n,133p,457b,707s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\diego\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on d:\diego\Universidad\2021-2\INF152\tarea3\build\main.pdf (2 pages, 131805 bytes).
+ <C:\Users\diego\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\diego\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on d:\diego\Universidad\2021-2\INF152\tarea3\build\main.pdf (3 pages, 134283 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
  45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

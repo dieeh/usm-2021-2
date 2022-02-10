@@ -1017,6 +1017,7 @@ INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcti1000.tfm
 INPUT C:\Users\diego\AppData\Local\MiKTeX\pdftex\config\pdftex.map
+INPUT D:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT .\Descuentos.tex
 INPUT .\Descuentos.tex
 INPUT .\Descuentos.tex
@@ -1034,6 +1035,8 @@ INPUT Entrega.tex
 INPUT d:\diego\Universidad\2021-2\INF152\tarea3\build\main.aux
 INPUT d:\diego\Universidad\2021-2\INF152\tarea3\build\main.out
 INPUT d:\diego\Universidad\2021-2\INF152\tarea3\build\main.out
+INPUT C:\Users\diego\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\diego\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\diego\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1000.pk
 INPUT C:\Users\diego\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1000.pk
 INPUT D:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb

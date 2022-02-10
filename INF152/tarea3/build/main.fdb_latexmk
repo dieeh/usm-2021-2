@@ -1,8 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1639435088 "d:/diego/Universidad/2021-2/INF152/tarea3/main.tex" "build/main.pdf" "main" 1639435093
+["pdflatex"] 1639450389 "d:/diego/Universidad/2021-2/INF152/tarea3/main.tex" "build/main.pdf" "main" 1639450395
+  "C:/Users/diego/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1639450029 11548 ffda5faa6d49a0412ea934a3fff4ef92 ""
   "C:/Users/diego/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcti1000.pk" 1639435086 14064 6707d60807ba7c21949b017e21110da1 ""
   "C:/Users/diego/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1632880471 9705527 8c0f69fbec2492fa1180a525ed6112eb ""
   "C:/Users/diego/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1632880121 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "D:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993066108 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "D:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcti1000.tfm" 993066158 1604 eaa2a1c5a522440155fc49d9724c228f ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "D:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -186,12 +188,12 @@
   "Descuentos.tex" 1638564584 1042 fa8a49b24778c0945bc9b621e55dfab3 ""
   "Entrega.tex" 1638564584 771 b2857c4283b2fe079949f2c8160afaba ""
   "Reglas.tex" 1638564584 1198 b990b0198a258c8aeed623c35e55c8bf ""
-  "build/main.aux" 1639435093 1547 b120592b05400e3083546cabdad6cb37 "pdflatex"
-  "build/main.out" 1639435093 385 9dd68b464019a35f38fe1b269ce31753 "pdflatex"
-  "d:/diego/Universidad/2021-2/INF152/tarea3/main.tex" 1638564584 4410 9a294162f25d86c1ce063ad1f4226f12 ""
-  "main.tex" 1638564584 4410 9a294162f25d86c1ce063ad1f4226f12 ""
+  "build/main.aux" 1639450394 1547 3a66f8f5467b679364ac7edae9d2a5fc "pdflatex"
+  "build/main.out" 1639450394 385 9dd68b464019a35f38fe1b269ce31753 "pdflatex"
+  "d:/diego/Universidad/2021-2/INF152/tarea3/main.tex" 1639450387 4813 955563e8eb6e99e6d3d839cc85d4ee78 ""
+  "main.tex" 1639450387 4813 955563e8eb6e99e6d3d839cc85d4ee78 ""
   (generated)
   "build/main.log"
-  "build/main.out"
   "build/main.pdf"
+  "build/main.out"
   "build/main.aux"
