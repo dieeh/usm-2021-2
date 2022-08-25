@@ -35,21 +35,10 @@ mediana(L, M):- tamanoLista(L, T), impar(T), X is (T - 1) / 2, encontrarElem(X, 
 /*proceso saca la mediana y el promedio y los compara y le da valores a Q dependiendo del resultado
 de la comparacion
 */
-%proceso(L,V):- mediana(L,M), promedio(L,P), (P>M -> Q is 1; Q is -1), (Q>0 -> append(V,['true'],Vnew); append(V,['false'],Vnew)), V is Vnew.
-
-proceso2(L,V,Vnew):- mediana(L,M), promedio(L,P), (P>M -> Q is 1; Q is -1), (Q>0 -> append(V,['true'],Vnew); append(V,['false'],Vnew)).
-
+proceso(L,Q):- mediana(L,M), promedio(L,P), (P>M -> Q is 1; Q is -1).
 
 /* bondad calcula si una lista es bondadosa si el promedio es mayor que la mediana de la lista
 */
-bondad([],[]).
-%bondad([H|T], V):- proceso(H,V), bondad(T,Vnew).
+bondad(H,V,Vnew):- member(X,H), proceso(X,Q), (Q>0 -> append([true], V, Vnew); append([false], V, Vnew)), fail ; true.  %como asignar Vnew a V para iteracion??
 
 
-bondad2([],[]).
-bondad2(H,V,Vnew):- member(X, H), proceso2(X,V,Vnew), fail ; true.
-
-
-
-listReading([], []).
-listReading([[H|_]|T], [H|T2]) :- listReading(T, T2).
